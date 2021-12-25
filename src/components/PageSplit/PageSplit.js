@@ -18,7 +18,7 @@ function PageSplit({
       setTransform(c);
     };
 
-    handleSplitResize({target: window})
+    handleSplitResize({ target: window });
 
     // Make sure transform is valid
     if (
@@ -34,7 +34,6 @@ function PageSplit({
     return () => {
       window.removeEventListener("resize", handleSplitResize);
     };
-
   }, []);
 
   return (
