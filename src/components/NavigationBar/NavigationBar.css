@@ -76,6 +76,9 @@ nav h3 a {
   }
 }
 
-@media (hover: none) and (pointer: fine) {
-  .navlinks li:hover a { background: var(--background); color: var(--navbar-active) }
+@media (hover: none) {
+  .navlinks li:hover a {
+    background: transparent;
+    color: var(--navbar-active);
+  }
 }
