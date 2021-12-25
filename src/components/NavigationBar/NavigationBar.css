@@ -1,0 +1,77 @@
+.navbar-wrapper {
+  position: relative;
+  width: 50vw;
+  height: 12.5vh;
+}
+
+nav {
+  width: 100%;
+  position: fixed;
+  display: flex;
+  align-items: center;
+
+  padding: 2vh 0;
+}
+
+.navlinks {
+  display: flex;
+  list-style: none;
+  font: var(--body-family);
+  font-family: "Epilogue", sans-serif;
+  letter-spacing: 0.01em;
+}
+
+.navlinks li,
+.navlinks li a {
+  color: var(--navbar-muted);
+  font-size: clamp(0.65rem, 0.4vw + 0.5rem, 0.875rem);
+  cursor: pointer;
+  transition: background 500ms ease;
+  padding: clamp(0.5em, 0.8vw, 0.7em);
+  margin: 0 clamp(0em, 0.95vw, 4.25em);
+}
+
+.navlinks li:last-child,
+.navlinks li a {
+  margin-right: 0;
+}
+
+.navlinks li:hover a {
+  color: var(--background);
+  background: var(--navbar-hover);
+}
+
+nav h3 {
+  flex: 1;
+}
+
+nav h3 a {
+  font: var(--heading-family);
+  font-size: clamp(1.3rem, 0.8vw + 0.7rem, 1.5rem);
+  color: var(--muted-color) !important;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.navlinks .active-nav,
+.navlinks .active-nav a {
+  color: var(--navbar-active);
+  font-weight: 700;
+  text-decoration: none;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 700px) {
+  nav {
+    flex-direction: column;
+    gap: 2.5vh;
+    margin: 0 0 2.5vh 0;
+  }
+  .navlinks {
+    width: calc(100% + 4.5 * clamp(0.5em, 0.8vw, 0.7em));
+    justify-content: space-between;
+  }
+  .navlinks li {
+    margin: 0;
+  }
+}

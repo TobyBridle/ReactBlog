@@ -1,0 +1,56 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  /* Font Related */
+
+  text-decoration: none;
+  color: var(--color);
+
+  /* Buttons */
+  outline: 0;
+  border: 0;
+}
+
+button:hover {
+  cursor: pointer;
+  filter: brightness(0.95);
+  -webkit-filter: brightness(0.95);
+}
+button:active,
+input:active {
+  border-bottom: 1px solid var(--action-color);
+}
+
+body {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  padding: 2vh calc(1.75 * clamp(0.5em, 0.8vw, 0.7em));
+  color: var(--color);
+  background: var(--background);
+  font-family: var(--body-family);
+  letter-spacing: 1px;
+}
+
+.App {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 85vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+
+.page-content {
+  flex: 1;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}

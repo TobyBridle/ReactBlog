@@ -1,0 +1,26 @@
+.pageSplit {
+    position: absolute;
+    background: var(--page-split-color);
+}
+
+.pageSplit.top {
+    left: 50%;
+    transform: translateX(-50%);
+    top: -2vh;
+}
+
+.pageSplit.bottom {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -2vh;
+}
+
+.pageSplit.top.narrow, .pageSplit.bottom.narrow{
+    width: 50%;
+    height: 1px;
+}
+
+.pageSplit.top.medium, .pageSplit.bottom.medium{
+    width: 75%;
+    height: 1px;
+}

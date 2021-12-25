@@ -1,0 +1,126 @@
+.page-content-top {
+  width: calc(100% - clamp(0.5em, 0.8vw, 0.7em));
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5vh;
+}
+
+.page-meta {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  max-width: 50%;
+  gap: 1vh;
+}
+
+.page-content-header {
+  font: var(--heading-family);
+  font-size: clamp(1.31rem, 1.2vw + 1.1rem, 3rem);
+  color: var(--header-color);
+}
+
+.page-content-description {
+  font-size: clamp(0.875rem, 0.5vw + 0.6rem, 1.125rem);
+  letter-spacing: 0.03em;
+  color: var(--muted-color);
+}
+
+.page-actions {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  height: calc(1 * clamp(1.31rem, 1.2vw + 1.1rem, 3rem));
+  max-width: clamp(500px, 38%, 60vw);
+  gap: 2vw;
+}
+
+.page-actions .search-bar,
+.page-actions .search-bar input,
+.page-actions .bookmarks-button {
+  background: var(--action-background);
+  color: var(--action-color);
+
+  flex: 1;
+  min-height: max(40px, 4vh);
+}
+
+.search-bar-placeholder,
+.search-bar input,
+.bookmarks-button {
+  font-family: "Epilogue", sans-serif;
+  font-size: 0.8em;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.search-bar {
+  position: relative;
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+}
+
+.search-bar-icon {
+  position: absolute;
+  left: 1.4em;
+  z-index: 1;
+
+  stroke-width: 35px;
+  stroke: var(--background);
+}
+
+.search-bar-placeholder {
+  position: absolute;
+  left: 4.2em;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.search-bar input {
+  color: var(--header-color) !important;
+  font-weight: 400;
+
+  padding: 0 2em 0 4em;
+}
+
+.search-bar input:focus ~ .search-bar-placeholder,
+.search-bar input:not(:placeholder-shown) ~ .search-bar-placeholder {
+  display: none;
+}
+
+.bookmarks-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 1.5em;
+}
+
+@media screen and (max-width: 950px) {
+  .page-content-top {
+    flex-direction: column;
+    gap: 2vh;
+    margin-bottom: 1.5vh;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .page-content-description {
+    display: none;
+  }
+  .page-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: clamp(300px, 38%, 60vw);
+  }
+  .page-actions .search-bar,
+  .page-actions .bookmarks-button {
+    width: 100%;
+  }
+
+  .page-actions .bookmarks-button {
+    justify-content: flex-start;
+    padding: 0 2em;
+  }
+}
