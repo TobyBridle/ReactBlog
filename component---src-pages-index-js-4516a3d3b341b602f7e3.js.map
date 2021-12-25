@@ -1,0 +1,1 @@
+{"version":3,"file":"component---src-pages-index-js-4516a3d3b341b602f7e3.js","mappings":"sHAOA,UALkB,WAEhB,OAAQ","sources":["webpack://blog/./src/pages/index.js"],"sourcesContent":["import * as React from \"react\"\n\nconst IndexPage = () => {\n\n  return (<></>);\n}\n\nexport default IndexPage;"],"names":[],"sourceRoot":""}
