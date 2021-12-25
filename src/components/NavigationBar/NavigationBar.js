@@ -15,7 +15,6 @@ function NavigationBar() {
       return res.json();
     })
     .then((routeList) => setRoutes(routeList));
-    setRoutes([...routes])
   }, []);
 
   return (
@@ -33,7 +32,6 @@ function NavigationBar() {
       </h3>
       <ul className="navlinks">
         { !!routes[1] && routes.map((route) => {
-          console.log(routes, route, activeURL)
           if (route.navSlug === activeURL.routeSlug) {
             return (
               <li className="active-nav" key={route.navSlug}>
