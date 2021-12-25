@@ -1,1 +1,13 @@
-{"polyfill":["/polyfill-9e6faf711ac93fb9f99b.js"],"app":["/app-098047048c31a1aba19f.js"],"component---src-pages-404-js":["/component---src-pages-404-js-87370f293d4177ef1698.js"],"component---src-pages-explore-js":["/component---src-pages-explore-js-bfe00cfa06ec4bf640d9.js"],"component---src-pages-index-js":["/component---src-pages-index-js-c15dce56bbd1e23d66b9.js"]}
+{
+  "polyfill": ["/polyfill-9e6faf711ac93fb9f99b.js"],
+  "app": ["/app-098047048c31a1aba19f.js"],
+  "component---src-pages-404-js": [
+    "/component---src-pages-404-js-87370f293d4177ef1698.js"
+  ],
+  "component---src-pages-explore-js": [
+    "/component---src-pages-explore-js-bfe00cfa06ec4bf640d9.js"
+  ],
+  "component---src-pages-index-js": [
+    "/component---src-pages-index-js-c15dce56bbd1e23d66b9.js"
+  ]
+}
