@@ -27,17 +27,17 @@
 
 // export default pageInfoSlice.reducer;
 
-import { atom } from "recoil"
+import { atom } from "recoil";
 
 const pageInfoAtom = atom({
-    key: "pageInfo",
-    default: {
-        page: {
-            owner: null,
-            owner_abbr: null,
-        },
-        info: {
-            isSet: false,
-        }
-    }  
-})
+  key: "pageInfo",
+  default: {
+    page: {
+      owner: null,
+      owner_abbr: null,
+    },
+    info: {
+      isSet: false,
+    },
+  },
+});

@@ -1,4 +1,4 @@
-import * as React from "react"
+import * as React from "react";
 import { Link } from "gatsby";
 import "./NavigationBar.css";
 
@@ -6,7 +6,6 @@ import NavigationAtom from "../../state/navigationAtom";
 import { useRecoilState } from "recoil";
 
 function NavigationBar() {
-
   const [activeURL, setActiveURL] = useRecoilState(NavigationAtom);
   const [routes, setRoutes] = React.useState([]);
 

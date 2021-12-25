@@ -6,11 +6,10 @@ import { Link } from "gatsby";
 import "./PageMeta.css";
 
 import NavigationAtom from "../../../state/navigationAtom";
-import { useRecoilState } from "recoil"
+import { useRecoilState } from "recoil";
 
 function PageMeta() {
-
-    const [_, setActiveURL] = useRecoilState(NavigationAtom);
+  const [_, setActiveURL] = useRecoilState(NavigationAtom);
 
   return (
     <section className="page-content-top">
@@ -29,7 +28,9 @@ function PageMeta() {
         <Link
           to="/bookmarks"
           className="bookmarks-button"
-          onClick={() => setActiveURL({ routeSlug: "/bookmarks", routeTitle: "Bookmarks" })}
+          onClick={() =>
+            setActiveURL({ routeSlug: "/bookmarks", routeTitle: "Bookmarks" })
+          }
         >
           <FontAwesomeIcon className="bookmarks-icon" icon={faBookmark} />
           <span className="text">Your Bookmarks</span>

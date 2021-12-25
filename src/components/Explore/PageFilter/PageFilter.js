@@ -7,7 +7,12 @@ function PageFilter() {
 
   return (
     <section className="filter-container">
-      <PageSplit size="medium" pos="bottom" thickness="slim" transform={{at: 650, axis: "x", pos: "top", size: "medium"}}/>
+      <PageSplit
+        size="medium"
+        pos="bottom"
+        thickness="slim"
+        transform={{ at: 650, axis: "x", pos: "top", size: "medium" }}
+      />
       <button
         className={
           postFilter === "Following"

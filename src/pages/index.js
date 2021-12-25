@@ -1,8 +1,7 @@
-import * as React from "react"
+import * as React from "react";
 
 const IndexPage = () => {
-
-  return (<></>);
-}
+  return <></>;
+};
 
 export default IndexPage;
