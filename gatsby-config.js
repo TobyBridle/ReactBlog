@@ -11,5 +11,6 @@ module.exports = {
         display: "swap",
       },
     },
+    "gatsby-plugin-meta-redirect",
   ],
 };
