@@ -36,7 +36,6 @@ function NavigationBar() {
       <ul className="navlinks">
         {!!routes[1] &&
           routes.map((route) => {
-            console.log(routes, route, activeURL);
             if (route.navSlug === activeURL.routeSlug) {
               return (
                 <li className="active-nav" key={route.navSlug}>

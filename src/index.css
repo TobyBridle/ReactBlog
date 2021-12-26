@@ -49,7 +49,7 @@ body {
 }
 
 .page-content {
-  flex: 1;
+  height: 87.5vh;
   position: relative;
   left: 50%;
   transform: translateX(-50%);

@@ -11,6 +11,14 @@ module.exports = {
         display: "swap",
       },
     },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "blog-posts",
+        path: `${__dirname}/src/blog-posts`
+      },
+    },
+    "gatsby-transformer-remark",
     "gatsby-plugin-meta-redirect",
   ],
 };

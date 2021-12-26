@@ -3,6 +3,8 @@
   background: var(--page-split-color);
 }
 
+/* Horizontal Splits */
+
 .pageSplit.top {
   left: 50%;
   transform: translateX(-50%);
@@ -25,4 +27,34 @@
 .pageSplit.bottom.medium {
   width: 75%;
   height: 1px;
+}
+
+/* Vertical Splits */
+.pageSplit.left {
+  top: 50%;
+  transform: translateY(-50%);
+  left: -2vw;
+}
+
+.pageSplit.right {
+  top: 50%;
+  transform: translateY(-50%);
+  right: -2vw;
+}
+
+
+.pageSplit.left.narrow,
+.pageSplit.right.narrow {
+  height: 50%;
+  width: 1px;
+}
+
+.pageSplit.left.medium,
+.pageSplit.right.medium {
+  height: 75%;
+  width: 1px;
+}
+
+.pageSplit.none {
+  display: none;
 }
