@@ -1,9 +1,9 @@
 .PostsContainer {
-    position: relative;
-    top: 8vh;
+  position: relative;
+  top: 8vh;
 }
 
 .blog-route {
-    display: flex;
-    max-width: clamp(500px, 38%, 60vw);
+  display: flex;
+  max-width: clamp(500px, 38%, 60vw);
 }
