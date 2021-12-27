@@ -18,7 +18,6 @@ function PageSplit({
       setTransform(c);
     };
 
-
     // Make sure transform is valid
     if (
       Math.max(window.innerHeight, window.innerWidth) &&
@@ -29,7 +28,6 @@ function PageSplit({
     ) {
       window.addEventListener("resize", handleSplitResize);
       handleSplitResize({ target: window });
-
     }
 
     return () => {

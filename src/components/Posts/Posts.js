@@ -6,7 +6,7 @@ import "./Posts.css";
 
 // import useInternalPaths from '../../_helpers/useInternalPaths';
 
-const Posts = ({postCount}) => {
+const Posts = ({ postCount }) => {
   // For Searching
   // const blogRoutes = useInternalPaths().filter(path => path.startsWith("/blog"));
 
@@ -22,52 +22,55 @@ const Posts = ({postCount}) => {
         thickness={"slim"}
         transform={{ at: 650, axis: "x", pos: "none", size: "medium" }}
       />
-      {pages.reverse().slice(postCount).map((page) => {
-        const {
-          frontmatter: {
-            title,
-            description,
-            articleThumbnail,
-            author,
-            authorPicture,
-            slug,
-            tags,
-          },
-          timeToRead,
-        } = page;
-        return (
-          <Link className="blog-route" to={slug}>
-            <div className="blog-route-left">
-              <div className="blog-route-author-info">
-                <div className="blog-route-author-profile">
-                  <img
-                    src={authorPicture}
-                    alt={`${author}'s Profile Picture}`}
-                  />
+      {pages
+        .reverse()
+        .slice(postCount)
+        .map((page) => {
+          const {
+            frontmatter: {
+              title,
+              description,
+              articleThumbnail,
+              author,
+              authorPicture,
+              slug,
+              tags,
+            },
+            timeToRead,
+          } = page;
+          return (
+            <Link className="blog-route" to={slug}>
+              <div className="blog-route-left">
+                <div className="blog-route-author-info">
+                  <div className="blog-route-author-profile">
+                    <img
+                      src={authorPicture}
+                      alt={`${author}'s Profile Picture}`}
+                    />
+                  </div>
+                  <span>{author}</span>
                 </div>
-                <span>{author}</span>
+                <div className="blog-route-title">{title}</div>
+                <div className="blog-route-description">{description}</div>
+                <div className="blog-route-tags">
+                  {tags.length > 1 ? (
+                    tags.map((tag) => {
+                      return <div className="blog-route-tag">{tag}</div>;
+                    })
+                  ) : (
+                    <div className="blog-route-tag">{tags}</div>
+                  )}
+                </div>
               </div>
-              <div className="blog-route-title">{title}</div>
-              <div className="blog-route-description">{description}</div>
-              <div className="blog-route-tags">
-                {tags.length > 1 ? (
-                  tags.map((tag) => {
-                    return <div className="blog-route-tag">{tag}</div>;
-                  })
-                ) : (
-                  <div className="blog-route-tag">{tags}</div>
-                )}
+              <div className="blog-route-right">
+                <div className="blog-route-thumbnail">
+                  <img src={articleThumbnail} />
+                </div>
+                <div className="blog-route-estimated">{timeToRead}</div>
               </div>
-            </div>
-            <div className="blog-route-right">
-              <div className="blog-route-thumbnail">
-                <img src={articleThumbnail} />
-              </div>
-              <div className="blog-route-estimated">{timeToRead}</div>
-            </div>
-          </Link>
-        );
-      })}
+            </Link>
+          );
+        })}
     </section>
   );
 };
