@@ -105,7 +105,9 @@
     width: 100%;
   }
 
-  .page-actions { max-width: calc(100% - clamp(0.5em, 0.8vw, 0.7em)); }
+  .page-actions {
+    max-width: calc(100% - clamp(0.5em, 0.8vw, 0.7em));
+  }
 }
 
 @media screen and (max-width: 650px) {

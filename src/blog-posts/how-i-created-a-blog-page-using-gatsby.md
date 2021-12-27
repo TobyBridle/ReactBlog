@@ -9,7 +9,7 @@ authorPicture: "https://cdn.ebaumsworld.com/2020/01/13/021356/86172725/lego-star
 description: "My (annoying) journey using Gatsby, React & Recoil"
 slug: "/blog/how-i-created-a-blog-page-using-gatsby"
 date: "2021-12-26"
-tags: ["Projects", "Gatsby", "React" ]
+tags: ["Projects", "Gatsby", "React"]
 ---
 
 # The Initial Idea
