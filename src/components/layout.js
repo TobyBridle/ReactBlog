@@ -10,8 +10,7 @@ const Layout = ({ children, meta }) => {
 
   React.useEffect(() => {
     origin = window.location.origin;
-    if(window.matchMedia('(prefers-color-scheme: light)').matches) 
-    {
+    if (window.matchMedia("(prefers-color-scheme: light)").matches) {
       document.documentElement.className = "theme-light";
     } else {
       document.documentElement.className = "theme-dark";

@@ -14,7 +14,8 @@ function Explore() {
   const metaInfo = {
     title: "Explore Articles",
     description:
-      new Date().toJSON().slice(0, 10).replace(/-/g, "/") + " - " +
+      new Date().toJSON().slice(0, 10).replace(/-/g, "/") +
+      " - " +
       "Some of the most popular hobbyist articles on the site. Gatsby, React & other frameworks are the centrepiece of our articles.",
   };
 
