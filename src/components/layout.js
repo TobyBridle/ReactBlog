@@ -11,7 +11,10 @@ const Layout = ({ children, meta }) => {
 
   // Prefixes
   if (meta.description)
-    mutated.description = meta.description + " - " + new Date().toJSON().slice(0, 10).replace(/-/g, "/");
+    mutated.description =
+      meta.description +
+      " - " +
+      new Date().toJSON().slice(0, 10).replace(/-/g, "/");
 
   React.useEffect(() => {
     origin = window.location.origin;
