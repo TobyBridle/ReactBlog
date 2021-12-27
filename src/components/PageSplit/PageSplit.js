@@ -18,17 +18,18 @@ function PageSplit({
       setTransform(c);
     };
 
-    handleSplitResize({ target: window });
 
     // Make sure transform is valid
     if (
       Math.max(window.innerHeight, window.innerWidth) &&
       Object.entries(transform).length ===
         Object.entries(transform).filter(
-          (val) => (val[1] > 0 || val[1].length > 0) && val[1] !== null
+          (val) => (val[1] > 0 || val[1]?.length > 0) && val[1] !== null
         ).length
     ) {
       window.addEventListener("resize", handleSplitResize);
+      handleSplitResize({ target: window });
+
     }
 
     return () => {

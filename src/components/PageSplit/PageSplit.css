@@ -29,6 +29,12 @@
   height: 1px;
 }
 
+.pageSplit.top.large,
+.pageSplit.bottom.large {
+  width: 100%;
+  height: 1px;
+}
+
 /* Vertical Splits */
 .pageSplit.left {
   top: 50%;

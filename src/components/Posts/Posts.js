@@ -6,20 +6,20 @@ import "./Posts.css";
 
 // import useInternalPaths from '../../_helpers/useInternalPaths';
 
-const Posts = () => {
+const Posts = ({postCount=undefined}) => {
 
     // For Searching
     // const blogRoutes = useInternalPaths().filter(path => path.startsWith("/blog"));
 
-    const { allMarkdownRemark: { nodes: pages } } = useStaticQuery(BlogPostsMetaData);
-
+    const pages = useStaticQuery(BlogPostsMetaData)['allMarkdownRemark'].nodes.reverse().slice(0, postCount);
     return (
         <section className="PostsContainer">
             <PageSplit size={"medium"} pos={"right"} thickness={"slim"} transform={{at: 650, axis: "x", pos: "none", size: "medium"}}/>
         { pages.map(page => {
             const { frontmatter: {title, description, articleThumbnail, author, authorPicture, slug, tags}, timeToRead} = page;
             return (
-                <Link className="blog-route" to={slug}>
+                <>
+                <Link key={slug} className="blog-route" to={slug}>
                     <div className="blog-route-left">
                         <div className="blog-route-author-info">
                             <div className="blog-route-author-profile">
@@ -38,9 +38,11 @@ const Posts = () => {
                     </div>
                     <div className="blog-route-right">
                         <div className="blog-route-thumbnail"><img src={articleThumbnail} /></div>
-                        <div className="blog-route-estimated">{timeToRead}</div>
+                        <div className="blog-route-estimated">{timeToRead} min(s)</div>
                     </div>
+                    <PageSplit size={"large"} pos={"bottom"} thickness={"slim"} />
                 </Link>
+                </>
             )
         })}
         </section>
