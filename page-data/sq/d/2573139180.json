@@ -1,14 +1,1 @@
-{
-  "data": {
-    "pages": {
-      "nodes": [
-        { "path": "/404/" },
-        { "path": "/404.html" },
-        { "path": "/explore/" },
-        { "path": "/" },
-        { "path": "/blog/how-the-filter-works/" },
-        { "path": "/blog/how-i-created-a-blog-page-using-gatsby/" }
-      ]
-    }
-  }
-}
+{"data":{"pages":{"nodes":[{"path":"/404/"},{"path":"/404.html"},{"path":"/explore/"},{"path":"/"},{"path":"/blog/how-the-filter-works/"},{"path":"/blog/how-i-created-a-blog-page-using-gatsby/"}]}}}
