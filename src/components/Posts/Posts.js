@@ -11,23 +11,23 @@ import FilterAtom from "../../state/filterAtom";
 
 // import useInternalPaths from '../../_helpers/useInternalPaths';
 
-const Posts = ({postCount=undefined}) => {
+const Posts = ({ postCount = undefined }) => {
   // For Searching
   // const blogRoutes = useInternalPaths().filter(path => path.startsWith("/blog"));
 
   const {
-    allMarkdownRemark: { nodes }
+    allMarkdownRemark: { nodes },
   } = useStaticQuery(BlogPostsMetaData);
 
-  const pages = ({
-    "following": nodes
-                .filter(post => post.frontmatter.following !== "none")
-                .slice(0, postCount),
-    "popular": nodes
-              .filter(post => post.frontmatter.rank > 0)
-              .sort((rank, rankAsc) => rank.frontmatter.rank - rankAsc.frontmatter.rank)
-              .slice(0, postCount)
-  })
+  const pages = {
+    following: nodes
+      .filter((post) => post.frontmatter.following !== "none")
+      .slice(0, postCount),
+    popular: nodes
+      .filter((post) => post.frontmatter.rank > 0)
+      .sort((rank, rankAsc) => rank.frontmatter.rank - rankAsc.frontmatter.rank)
+      .slice(0, postCount),
+  };
 
   const [activeFilter] = useRecoilState(FilterAtom);
 
@@ -50,11 +50,11 @@ const Posts = ({postCount=undefined}) => {
             authorPicture,
             slug,
             tags,
-            rank
+            rank,
           },
           timeToRead,
         } = page;
-        if(rank > 0) modTags.push(...tags, `#${rank} on Trending 🔥`);
+        if (rank > 0) modTags.push(...tags, `#${rank} on Trending 🔥`);
         return (
           <Link key={slug} className="blog-route" to={slug}>
             <div className="blog-route-left">
@@ -72,7 +72,11 @@ const Posts = ({postCount=undefined}) => {
               <div className="blog-route-tags">
                 {modTags.length > 1 ? (
                   modTags.map((tag) => {
-                    return <div key={slug + tag} className="blog-route-tag">{tag}</div>;
+                    return (
+                      <div key={slug + tag} className="blog-route-tag">
+                        {tag}
+                      </div>
+                    );
                   })
                 ) : (
                   <div className="blog-route-tag">{tags}</div>
@@ -81,14 +85,17 @@ const Posts = ({postCount=undefined}) => {
             </div>
             <div className="blog-route-right">
               <div className="blog-route-thumbnail">
-                <img src={articleThumbnail} alt={"Article Thumbnail"}/>
+                <img src={articleThumbnail} alt={"Article Thumbnail"} />
               </div>
               <div className="blog-route-estimated">
-                <FontAwesomeIcon className="blog-route-estimated-icon" icon={faClock} />
+                <FontAwesomeIcon
+                  className="blog-route-estimated-icon"
+                  icon={faClock}
+                />
                 <span>{timeToRead} min(s)</span>
-                </div>
+              </div>
             </div>
-          <PageSplit size="large"/>
+            <PageSplit size="large" />
           </Link>
         );
       })}
@@ -98,10 +105,10 @@ const Posts = ({postCount=undefined}) => {
 
 const BlogPostsMetaData = graphql`
   query {
-    allMarkdownRemark { #//! Need to add Limit using \`lim\`
-      nodes{
+    allMarkdownRemark {
+      #//! Need to add Limit using \`lim\`
+      nodes {
         frontmatter {
-
           rank
           following
 
