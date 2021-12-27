@@ -11,11 +11,12 @@ import Layout from "../components/layout";
 import Posts from "../components/Posts/Posts";
 
 function Explore() {
-
   const metaInfo = {
     title: "Explore Articles",
-    description: new Date().toJSON().slice(0,10).replace(/-/g,'/')+"Some of the most popular hobbyist articles on the site. Gatsby, React & other frameworks are the centrepiece of our articles.",
-  }
+    description:
+      new Date().toJSON().slice(0, 10).replace(/-/g, "/") +
+      "Some of the most popular hobbyist articles on the site. Gatsby, React & other frameworks are the centrepiece of our articles.",
+  };
 
   return (
     <Layout meta={metaInfo}>

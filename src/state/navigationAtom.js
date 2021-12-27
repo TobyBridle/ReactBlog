@@ -2,7 +2,11 @@ import { atom } from "recoil";
 
 const isBrowser = typeof window !== "undefined";
 
-const defaultRouteTitle = isBrowser ? window.location.pathname === "/" || window.location.pathname === "/explore" ? "Explore" : document.title.split(" | ")[1] : "Explore" 
+const defaultRouteTitle = isBrowser
+  ? window.location.pathname === "/" || window.location.pathname === "/explore"
+    ? "Explore"
+    : document.title.split(" | ")[1]
+  : "Explore";
 
 const navigationAtom = atom({
   key: "navigation",
@@ -12,7 +16,7 @@ const navigationAtom = atom({
         ? "/explore"
         : window.location.pathname
       : "/explore",
-    routeTitle: defaultRouteTitle
+    routeTitle: defaultRouteTitle,
   },
 });
 

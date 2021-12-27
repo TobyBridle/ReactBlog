@@ -9,9 +9,13 @@ const IndexPage = () => {
   React.useEffect(() => {
     Redirect("/explore/");
   });
-  return <Layout meta={{robots: "noindex,follow"}}>
-    <p>Please redirect to <a href="/explore">https://bridle.ml/explore</a></p>
-  </Layout>;
+  return (
+    <Layout meta={{ robots: "noindex,follow" }}>
+      <p>
+        Please redirect to <a href="/explore">https://bridle.ml/explore</a>
+      </p>
+    </Layout>
+  );
 };
 
 export default IndexPage;

@@ -22,7 +22,7 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-plugin-sitemap",
-      excludes: ["/", "/404"]
+      excludes: ["/", "/404"],
     },
     "gatsby-plugin-meta-redirect",
   ],
