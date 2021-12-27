@@ -1,1 +1,30 @@
-{"data":{"allMarkdownRemark":{"nodes":[{"frontmatter":{"title":"Wow, another Blog Post?","author":"Toby Bridle","authorPicture":"https://images.pexels.com/photos/4655426/pexels-photo-4655426.jpeg?cs=srgb&dl=pexels-jacob-pilatoe-4655426.jpg&fm=jpg","slug":"/blog/another-blog-post","description":"Please just read more"},"excerpt":"Wow This is a really cool page","timeToRead":1},{"frontmatter":{"title":"How I created A Blog Page using Gatsby & React","author":"Toby Bridle","authorPicture":"https://images.pexels.com/photos/4655426/pexels-photo-4655426.jpeg?cs=srgb&dl=pexels-jacob-pilatoe-4655426.jpg&fm=jpg","slug":"/blog/how-i-created-a-blog-page-using-gatsby","description":"My (annoying) journey using Gatsby, React & Recoil"},"excerpt":"The Initial Idea I knew I needed some (…","timeToRead":1}]}}}
+{
+  "data": {
+    "allMarkdownRemark": {
+      "nodes": [
+        {
+          "frontmatter": {
+            "title": "Wow, another Blog Post?",
+            "author": "Toby Bridle",
+            "authorPicture": "https://images.pexels.com/photos/4655426/pexels-photo-4655426.jpeg?cs=srgb&dl=pexels-jacob-pilatoe-4655426.jpg&fm=jpg",
+            "slug": "/blog/another-blog-post",
+            "description": "Please just read more"
+          },
+          "excerpt": "Wow This is a really cool page",
+          "timeToRead": 1
+        },
+        {
+          "frontmatter": {
+            "title": "How I created A Blog Page using Gatsby & React",
+            "author": "Toby Bridle",
+            "authorPicture": "https://images.pexels.com/photos/4655426/pexels-photo-4655426.jpeg?cs=srgb&dl=pexels-jacob-pilatoe-4655426.jpg&fm=jpg",
+            "slug": "/blog/how-i-created-a-blog-page-using-gatsby",
+            "description": "My (annoying) journey using Gatsby, React & Recoil"
+          },
+          "excerpt": "The Initial Idea I knew I needed some (…",
+          "timeToRead": 1
+        }
+      ]
+    }
+  }
+}
