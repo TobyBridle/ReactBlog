@@ -1,0 +1,24 @@
+{
+    "$schema": "https://json.schemastore.org/web-manifest-combined.json",
+    "name": "Toby Bridle | Portfolio Blog",
+    "short_name": "Bridle | Articles",
+    "background_color": "#f4f4f4",
+    "description": "A minimalist blog-page that loads blazingly fast. Made with Gatsby, React and a whole lot of love ❤️",
+    "icons": [
+        {
+            "src": "favicon-light.ico",
+            "sizes": "32x32",
+            "type": "image/icon"
+        },
+        {
+            "src": "apple-touch.png",
+            "sizes": "180x180",
+            "type": "image/png"
+        },
+        {
+            "src": "poster-light.svg",
+            "sizes": "any",
+            "type": "image/svg+xml"
+        }
+    ]
+}
