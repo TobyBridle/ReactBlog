@@ -56,15 +56,13 @@
 @media only screen and (max-width: 950px) {
   .filter-container {
     min-height: max(40px, 4vh);
-    width: 100%;
-    max-width: clamp(500px, 38%, 60vw);
+    width: calc(100% - clamp(0.5em, 0.8vw, 0.7em));
     gap: 2vw;
   }
 
   .active-filter-slider {
     border: 2px solid var(--filter-post-background);
-    width: 50%;
-    max-width: calc(clamp(250px, 19%, 30vw) - 1vw + 1px);
+    width: calc(50% - 1vw + 1px);
   }
 
   .slide-right {

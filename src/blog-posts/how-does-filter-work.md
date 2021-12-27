@@ -1,8 +1,11 @@
 ---
+rank: 2
+following: "Admin"
+
 title: "How does the Filtering Work?"
-author: "Toby Bridle"
-articleThumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Filter_font_awesome.svg/512px-Filter_font_awesome.svg.png"
-authorPicture: "https://images.pexels.com/photos/4655426/pexels-photo-4655426.jpeg?cs=srgb&dl=pexels-jacob-pilatoe-4655426.jpg&fm=jpg"
+author: "Not Toby Bridle"
+articleThumbnail: "https://img.icons8.com/color/344/filter-and-sort.png"
+authorPicture: "https://cdn.ebaumsworld.com/2020/01/13/021054/86172703/lego-star-wars-profile-4.jpg"
 description: "An Article explaining how the filter system would be used."
 slug: "/blog/how-the-filter-works"
 date: "2021-12-27"

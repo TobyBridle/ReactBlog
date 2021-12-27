@@ -29,6 +29,9 @@
   --blog-chip-color: #e9e9e9;
   --blog-chip-background: #454545;
 
+  --reading-time-clock: #8a8a8a;
+  --reading-time-text: #313131;
+
   /* Navigation Bar Colours */
   --navbar-active: #3c3c3c;
   --navbar-muted: #686868ad;
@@ -62,6 +65,9 @@
   --article-title: #f8f8f8;
   --blog-chip-color: #d9d9d9;
   --blog-chip-background: #2b2b2b;
+
+  --reading-time-clock: #fff;
+  --reading-time-text: #fff;
 
   /* Navigation Bar Colours */
   --navbar-active: #f5f5f5;

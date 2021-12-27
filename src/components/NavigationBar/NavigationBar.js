@@ -34,12 +34,12 @@ function NavigationBar() {
         </Link>
       </h3>
       <ul className="navlinks">
-        {!!routes[1] &&
+        {!!routes[2] &&
           routes.map((route) => {
             if (route.navSlug === activeURL.routeSlug) {
               return (
                 <li className="active-nav" key={route.navSlug}>
-                  <Link to={route.navSlug}>{route.navTitle}</Link>
+                  <Link to={activeURL.routeSlug}>{activeURL.routeTitle}</Link>
                 </li>
               );
             }

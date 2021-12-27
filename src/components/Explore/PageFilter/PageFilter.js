@@ -2,8 +2,11 @@ import React, { useState } from "react";
 import "./PageFilter.css";
 import PageSplit from "../../PageSplit/PageSplit";
 
+import { useRecoilState } from "recoil";
+import FilterAtom from "../../../state/filterAtom";
+
 function PageFilter() {
-  const [postFilter, setFilter] = useState("Following");
+  const [postFilter, setFilter] = useRecoilState(FilterAtom);
 
   return (
     <section className="filter-container">

@@ -16,7 +16,7 @@ function Explore() {
       <div className="ExplorePage" style={{ width: "100%", height: "100%" }}>
         <PageMeta />
         <PageFilter />
-        <Posts postCount={Infinity} />
+        <Posts />
       </div>
     </Layout>
   );
