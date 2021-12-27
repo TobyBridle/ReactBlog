@@ -7,18 +7,15 @@ import { Helmet } from "react-helmet";
 
 const Layout = ({ children, meta }) => {
   let origin = "https://bridle.ml";
-  let mutated = {};
-
-  // Prefixes
-  if (meta.description)
-    mutated.description =
-      meta.description +
-      " - " +
-      new Date().toJSON().slice(0, 10).replace(/-/g, "/");
 
   React.useEffect(() => {
     origin = window.location.origin;
-    document.documentElement.className = "theme-light";
+    if(window.matchMedia('(prefers-color-scheme: light)').matches) 
+    {
+      document.documentElement.className = "theme-light";
+    } else {
+      document.documentElement.className = "theme-dark";
+    }
   });
   return (
     <>
@@ -32,7 +29,7 @@ const Layout = ({ children, meta }) => {
           name="description"
           content={
             meta.description
-              ? mutated.description
+              ? meta.description
               : "A Blog Page made for display on Toby Bridle's Portfolio"
           }
         />
@@ -87,14 +84,14 @@ const Layout = ({ children, meta }) => {
           property="og:description"
           content={
             meta.description
-              ? mutated.description
+              ? meta.description
               : "A Blog Page made for display on Toby Bridle's Portfolio"
           }
         />
         <meta
           name="twitter-description"
           content={
-            mutated.description
+            meta.description
               ? meta.description
               : "A Blog Page made for display on Toby Bridle's Portfolio"
           }
@@ -102,7 +99,7 @@ const Layout = ({ children, meta }) => {
         <meta
           property="og:image"
           content={
-            meta.image ? meta.image : `${origin}//assets/page-preview-light.svg`
+            meta.image ? meta.image : `${origin}//assets/page-preview-light.jpg`
           }
         />
         <meta
@@ -111,8 +108,8 @@ const Layout = ({ children, meta }) => {
             meta.twitter_card ? meta.twitter_card : "summary_large_image"
           }
         />
-        <meta property="twitter:url" content={`${meta.url ? meta.url : "https://bridle.ml/"}`} />
-        <meta property="twitter:image" content={`${meta.image ? meta.image : `${origin}//assets/page-preview-light.svg`}`} />
+        <meta property="twitter:url" content={`${meta.url ? meta.url : "https://bridle.ml/explore/"}`} />
+        <meta property="twitter:image" content={`${meta.image ? meta.image : `${origin}//assets/page-preview-light.jpg`}`} />
         )
       </Helmet>
       <div className="App">
