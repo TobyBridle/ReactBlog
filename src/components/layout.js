@@ -108,8 +108,16 @@ const Layout = ({ children, meta }) => {
             meta.twitter_card ? meta.twitter_card : "summary_large_image"
           }
         />
-        <meta property="twitter:url" content={`${meta.url ? meta.url : "https://bridle.ml/explore/"}`} />
-        <meta property="twitter:image" content={`${meta.image ? meta.image : `${origin}//assets/page-preview-light.jpg`}`} />
+        <meta
+          property="twitter:url"
+          content={`${meta.url ? meta.url : "https://bridle.ml/"}`}
+        />
+        <meta
+          property="twitter:image"
+          content={`${
+            meta.image ? meta.image : `${origin}//assets/page-preview-light.svg`
+          }`}
+        />
         )
       </Helmet>
       <div className="App">
