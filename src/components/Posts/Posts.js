@@ -21,7 +21,7 @@ const Posts = ({postCount=undefined}) => {
 
   const pages = ({
     "following": nodes
-                .filter(post => post.frontmatter.following)
+                .filter(post => post.frontmatter.following !== "none")
                 .slice(0, postCount),
     "popular": nodes
               .filter(post => post.frontmatter.rank > 0)

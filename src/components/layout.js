@@ -11,7 +11,7 @@ const Layout = ({ children, documentTitle }) => {
         ? document.title.split(" | ")[0]
         : "Toby Bridle";
     document.title = `${t} | ${documentTitle}`;
-    document.documentElement.className = "theme-dark";
+    document.documentElement.className = "theme-light";
   });
   return (
     <div className="App">

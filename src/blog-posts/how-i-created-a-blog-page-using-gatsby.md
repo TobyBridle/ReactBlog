@@ -1,7 +1,6 @@
 ---
 rank: 1
-following: ""
-
+following: "none"
 title: "How I created A Blog Page using Gatsby & React"
 author: "Toby Bridle"
 articleThumbnail: "https://codingthesmartway.com/wp-content/uploads/2019/02/gatsby-logo.png"

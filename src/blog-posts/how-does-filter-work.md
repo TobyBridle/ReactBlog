@@ -1,7 +1,6 @@
 ---
 rank: 2
 following: "Admin"
-
 title: "How does the Filtering Work?"
 author: "Not Toby Bridle"
 articleThumbnail: "https://img.icons8.com/color/344/filter-and-sort.png"
