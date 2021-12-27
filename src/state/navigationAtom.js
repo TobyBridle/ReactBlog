@@ -6,7 +6,7 @@ const defaultRouteTitle = isBrowser
   ? window.location.pathname === "/" || window.location.pathname === "/explore/"
     ? "Explore"
     : document.title.split(" | ")[1]
-  : "Explore"
+  : "Explore";
 
 const navigationAtom = atom({
   key: "navigation",
