@@ -52,7 +52,8 @@ const Layout = ({ children, meta }) => {
           href={`${origin}//assets/apple-touch.png`}
         />
         <link
-          rel="shortcut icon"
+          rel="icon"
+          sizes="32x32"
           href={`${origin}//assets/favicon-light.ico`}
         />
         <meta
