@@ -124,6 +124,7 @@
   color: var(--reading-time-text);
   font-size: clamp(0.5em, 2vw, 0.75em);
   font-weight: 600;
+  letter-spacing: normal;
 }
 
 .blog-route-estimated svg {

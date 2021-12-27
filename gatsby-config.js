@@ -19,6 +19,7 @@ module.exports = {
       },
     },
     "gatsby-transformer-remark",
+    "gatsby-plugin-react-helmet",
     "gatsby-plugin-meta-redirect",
   ],
 };

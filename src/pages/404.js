@@ -2,8 +2,11 @@ import * as React from "react";
 import Layout from "../components/layout";
 
 const NotFoundPage = () => {
+  const metaInfo = {
+    title: "404 - Page not Found"
+  }
   return (
-    <Layout documentTitle="Page Not Found">
+    <Layout meta={metaInfo}>
       <h4>Sorry, Page not Found!</h4>
     </Layout>
   );
