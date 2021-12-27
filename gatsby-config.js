@@ -20,6 +20,10 @@ module.exports = {
     },
     "gatsby-transformer-remark",
     "gatsby-plugin-react-helmet",
+    {
+      resolve: "gatsby-plugin-sitemap",
+      excludes: ["/", "/404"]
+    },
     "gatsby-plugin-meta-redirect",
   ],
 };

@@ -13,8 +13,8 @@ import Posts from "../components/Posts/Posts";
 function Explore() {
 
   const metaInfo = {
-    title: "Explore",
-    description: "Looking for a Programming Article? BRIDLE is the home of Toby Bridle's articles, used primarily as examples his portfolio; however, you may just find something useful in there that you didn't know before. If you've got some spare time - why not peep through some of our content?",
+    title: "Explore Articles",
+    description: new Date().toJSON().slice(0,10).replace(/-/g,'/')+"Some of the most popular hobbyist articles on the site. Gatsby, React & other frameworks are the centrepiece of our articles.",
   }
 
   return (

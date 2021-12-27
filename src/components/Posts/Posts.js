@@ -62,24 +62,24 @@ const Posts = ({ postCount = undefined }) => {
                 <div className="blog-route-author-profile">
                   <img
                     src={authorPicture}
-                    alt={`${author}'s Profile Picture}`}
+                    alt={`${author}'s Profile Picture`}
                   />
                 </div>
                 <span>{author}</span>
               </div>
               <div className="blog-route-title">{title}</div>
-              <div className="blog-route-description">{description}</div>
-              <div className="blog-route-tags">
+              <div className="blog-route-description" data-nosnippet>{description}</div>
+              <div className="blog-route-tags" data-nosnippet>
                 {modTags.length > 1 ? (
                   modTags.map((tag) => {
                     return (
-                      <div key={slug + tag} className="blog-route-tag">
+                      <div key={slug + tag} className="blog-route-tag" data-nosnippet>
                         {tag}
                       </div>
                     );
                   })
                 ) : (
-                  <div className="blog-route-tag">{tags}</div>
+                  <div className="blog-route-tag" data-nosnippet>{tags}</div>
                 )}
               </div>
             </div>
@@ -87,12 +87,12 @@ const Posts = ({ postCount = undefined }) => {
               <div className="blog-route-thumbnail">
                 <img src={articleThumbnail} alt={"Article Thumbnail"} />
               </div>
-              <div className="blog-route-estimated">
+              <div className="blog-route-estimated" data-nosnippet>
                 <FontAwesomeIcon
                   className="blog-route-estimated-icon"
                   icon={faClock}
                 />
-                <span>{timeToRead} min(s)</span>
+                <span data-nosnippet>{timeToRead} min(s)</span>
               </div>
             </div>
             <PageSplit size="large" />

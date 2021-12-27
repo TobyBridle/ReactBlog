@@ -3,7 +3,9 @@ import Layout from "../components/layout";
 
 const NotFoundPage = () => {
   const metaInfo = {
-    title: "404 - Page not Found"
+    title: "404 - Page not Found",
+    description: "Hmm. There doesn't seem to be an article at this URL.",
+    robots: "noindex,follow"
   }
   return (
     <Layout meta={metaInfo}>

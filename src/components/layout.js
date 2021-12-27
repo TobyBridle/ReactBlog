@@ -6,30 +6,42 @@ import "../index.css";
 import { Helmet } from "react-helmet";
 
 const Layout = ({ children, meta}) => {
+  let origin = "https://bridle.ml";
+  
+  // Prefixes
+  if(meta.description) meta.description += new Date().toJSON().slice(0,10).replace(/-/g,'/');
+
   React.useEffect(() => {
+    origin = window.location.origin;
     document.documentElement.className = "theme-light";
   });
   return (
     <>
     <Helmet>
-      <link rel="icon" href="/assets/favicon-light.svg"/>
+      <link rel="icon" href={`${origin}//assets/favicon-light.svg`}/>
       <title>{`Toby Bridle | ${meta.title ? meta.title : "Portfolio Blog"}`}</title>
       <meta charSet="utf-8" />
       <meta name="description" content={meta.description ? meta.description : "A Blog Page made for display on Toby Bridle's Portfolio"}/>
-      <meta name="keywords" content={meta.keywords ? meta.keywords.join(", ") : "Blog, Portfolio, React, Gatsby, Articles"}/>
       <meta name="author" content={meta.author ? meta.author : "Toby Bridle"}/>
 
-      <meta http-equiv="Content-Type" content={ meta.http_equiv ? meta.http_equiv : "text/html;charset=ISO-8859-1"} />
+      <link rel="manifest" href={`${origin}//assets/manifest.json`} crossOrigin="use-credentials" />
+      <meta name="theme-color" content="#f4f4f4" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+      <link rel="apple-touch-icon" sizes="180x180" href={`${origin}//assets/apple-touch.png`} />
+      <link rel="shortcut icon" href={`${origin}//assets/favicon-light.ico`} />
+      <meta name="msapplication-square" content={`${origin}//assets/apple-touch.png`} />
+
       <meta name="robots" content={ meta.robots ? meta.robots : "index,nofollow" } />
+      <meta http-equiv = "content-language" content = "en-us"/>
 
       <meta property="og:site_name" content="Toby Bridle | Portfolio" />
-      <meta property="og:title" content={meta?.title} />
-      <meta name="twitter:title" content={meta?.title} />
+      <meta property="og:title" content={`Toby Bridle | ${meta.title ? meta.title : "Portfolio Blog"}`} />
+      <meta name="twitter:title" content={`Toby Bridle | ${meta.title ? meta.title : "Portfolio Blog"}`} />
       <meta property="og:type" content="article" />
       <meta property="og:description" content={meta.description ? meta.description : "A Blog Page made for display on Toby Bridle's Portfolio"} />
       <meta name="twitter-description" content={meta.description ? meta.description : "A Blog Page made for display on Toby Bridle's Portfolio"} />
-      <meta property="og:image" content={meta.image ? meta.image : "/assets/poster-light.svg"} />
-      <meta name="twitter:card" content={meta.image ? meta.image : "/assets/poster-light.svg"} />)
+      <meta property="og:image" content={meta.image ? meta.image : `${origin}//assets/page-preview-light.svg` } />
+      <meta name="twitter:card" content={meta.image ? meta.image : `${origin}//assets/page-preview-light.svg`} />)
     </Helmet>
     <div className="App">
       <section className="navbar-wrapper">
