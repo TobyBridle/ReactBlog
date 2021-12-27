@@ -16,7 +16,7 @@ const navigationAtom = atom({
         ? "/explore"
         : window.location.pathname
       : "/explore",
-    routeTitle: defaultRouteTitle
+    routeTitle: defaultRouteTitle,
   },
 });
 
