@@ -28,7 +28,7 @@ const Layout = ({ children, meta}) => {
       <meta name="theme-color" content="#f4f4f4" />
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
       <link rel="apple-touch-icon" sizes="180x180" href={`${origin}//assets/apple-touch.png`} />
-      <link rel="shortcut icon" href={`${origin}//assets/favicon-light.ico`} />
+      <link rel="icon" sizes="32x32" href={`${origin}//assets/favicon-light.ico`} />
       <meta name="msapplication-square" content={`${origin}//assets/apple-touch.png`} />
 
       <meta name="robots" content={ meta.robots ? meta.robots : "index,nofollow" } />
