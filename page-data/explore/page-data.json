@@ -1,5 +1,6 @@
 {
-    "componentChunkName": "component---src-pages-explore-js",
-    "path": "/explore/",
-    "result": {"pageContext":{}},
-    "staticQueryHashes": ["3334702500"]}
+  "componentChunkName": "component---src-pages-explore-js",
+  "path": "/explore/",
+  "result": { "pageContext": {} },
+  "staticQueryHashes": ["3334702500"]
+}
