@@ -23,6 +23,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-sitemap",
       excludes: ["/", "/404"],
+      createLinkInHead: true,
     },
     "gatsby-plugin-meta-redirect",
   ],

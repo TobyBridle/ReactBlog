@@ -7,10 +7,11 @@ import { Helmet } from "react-helmet";
 
 const Layout = ({ children, meta }) => {
   let origin = "https://bridle.ml";
+  let mutated = {};
 
   // Prefixes
   if (meta.description)
-    meta.description += new Date().toJSON().slice(0, 10).replace(/-/g, "/");
+    mutated.description = meta.description + " - " + new Date().toJSON().slice(0, 10).replace(/-/g, "/");
 
   React.useEffect(() => {
     origin = window.location.origin;
@@ -28,7 +29,7 @@ const Layout = ({ children, meta }) => {
           name="description"
           content={
             meta.description
-              ? meta.description
+              ? mutated.description
               : "A Blog Page made for display on Toby Bridle's Portfolio"
           }
         />
@@ -83,14 +84,14 @@ const Layout = ({ children, meta }) => {
           property="og:description"
           content={
             meta.description
-              ? meta.description
+              ? mutated.description
               : "A Blog Page made for display on Toby Bridle's Portfolio"
           }
         />
         <meta
           name="twitter-description"
           content={
-            meta.description
+            mutated.description
               ? meta.description
               : "A Blog Page made for display on Toby Bridle's Portfolio"
           }
