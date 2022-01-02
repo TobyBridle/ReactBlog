@@ -20,7 +20,10 @@ const Layout = ({ children, meta }) => {
   return (
     <>
       <Helmet>
-        <link rel="icon" href={`${origin}//assets/favicon-light.svg`} />
+        {/* Light Mode Favicon */}
+        <link rel="icon" href={`${origin}//assets/favicon-light.svg`}/>
+        {/* Dark Mode Favicon */}
+        <link rel="icon" href={`${origin}//assets/favicon-dark.svg`} media="(prefers-color-scheme: dark)"/>
         <title>{`Toby Bridle | ${
           meta.title ? meta.title : "Portfolio Blog"
         }`}</title>
@@ -42,7 +45,7 @@ const Layout = ({ children, meta }) => {
           href={`${origin}//assets/manifest.json`}
           crossOrigin="use-credentials"
         />
-        <meta name="theme-color" content="#f4f4f4" />
+        <meta name="theme-color" content="#f4f4f4"/>
         <meta
           name="apple-mobile-web-app-status-bar-style"
           content="black-translucent"
@@ -53,13 +56,21 @@ const Layout = ({ children, meta }) => {
           href={`${origin}//assets/apple-touch.png`}
         />
         <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href={`${origin}//assets/apple-touch-dark.png`}
+          media="(prefers-color-scheme: dark)"
+        />
+        <link
           rel="icon"
           sizes="32x32"
           href={`${origin}//assets/favicon-light.ico`}
         />
-        <meta
-          name="msapplication-square"
-          content={`${origin}//assets/apple-touch.png`}
+        <link
+          rel="icon"
+          sizes="32x32"
+          href={`${origin}//assets/favicon-dark.ico`}
+          media="(prefers-color-scheme: dark)"
         />
         <meta
           name="robots"

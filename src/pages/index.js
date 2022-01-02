@@ -10,9 +10,9 @@ const IndexPage = () => {
     Redirect("/explore/");
   });
   return (
-    <Layout meta={{ robots: "noindex,follow" }}>
+    <Layout meta={{ robots: "index,follow" }}>
       <p>
-        Please redirect to <a href="/explore">https://bridle.ml/explore</a>
+        If you're seeing this, please redirect to <a href="/explore">https://bridle.ml/explore</a>
       </p>
     </Layout>
   );

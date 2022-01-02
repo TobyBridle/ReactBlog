@@ -68,9 +68,9 @@ const Posts = ({ postCount = undefined }) => {
                 <span>{author}</span>
               </div>
               <div className="blog-route-title">{title}</div>
-              <div className="blog-route-description" data-nosnippet>
+              <p className="blog-route-description" data-nosnippet>
                 {description}
-              </div>
+              </p>
               <div className="blog-route-tags" data-nosnippet>
                 {modTags.length > 1 ? (
                   modTags.map((tag) => {
