@@ -20,9 +20,13 @@ const Layout = ({ children, meta }) => {
     <>
       <Helmet>
         {/* Light Mode Favicon */}
-        <link rel="icon" href={`${origin}//assets/favicon-light.svg`}/>
+        <link rel="icon" href={`${origin}//assets/favicon-light.svg`} />
         {/* Dark Mode Favicon */}
-        <link rel="icon" href={`${origin}//assets/favicon-dark.svg`} media="(prefers-color-scheme: dark)"/>
+        <link
+          rel="icon"
+          href={`${origin}//assets/favicon-dark.svg`}
+          media="(prefers-color-scheme: dark)"
+        />
         <title>{`Toby Bridle | ${
           meta.title ? meta.title : "Portfolio Blog"
         }`}</title>
@@ -44,7 +48,7 @@ const Layout = ({ children, meta }) => {
           href={`${origin}//assets/manifest.json`}
           crossOrigin="use-credentials"
         />
-        <meta name="theme-color" content="#f4f4f4"/>
+        <meta name="theme-color" content="#f4f4f4" />
         <meta
           name="apple-mobile-web-app-status-bar-style"
           content="black-translucent"
