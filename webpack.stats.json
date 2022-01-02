@@ -1,1 +1,112 @@
-{"name":"build-javascript","namedChunkGroups":{"polyfill":{"name":"polyfill","assets":[{"name":"webpack-runtime-9c2a024535db531f6700.js","size":4498},{"name":"polyfill-d69664561c90ab43065f.js","size":85826}],"filteredAssets":0,"assetsSize":90324,"filteredAuxiliaryAssets":2,"auxiliaryAssetsSize":225659},"app":{"name":"app","assets":[{"name":"webpack-runtime-9c2a024535db531f6700.js","size":4498},{"name":"styles.ea1bc6c97323b644ef43.css","size":9849},{"name":"framework-308bfafcc2bf57ff7eac.js","size":128723},{"name":"0a301732-c83d1dc0decdc7b88c62.js","size":83722},{"name":"app-6f33a965e9dc6fcd206c.js","size":96619}],"filteredAssets":0,"assetsSize":323411,"filteredAuxiliaryAssets":4,"auxiliaryAssetsSize":1175338},"component---src-pages-404-js":{"name":"component---src-pages-404-js","assets":[{"name":"component---src-pages-404-js-3c7ab4e45a2c1aa85ac1.js","size":441}],"filteredAssets":0,"assetsSize":441,"filteredAuxiliaryAssets":1,"auxiliaryAssetsSize":728},"component---src-pages-explore-js":{"name":"component---src-pages-explore-js","assets":[{"name":"styles.ea1bc6c97323b644ef43.css","size":9849},{"name":"cb1608f2-39a11f9ec0cab62d1613.js","size":692},{"name":"component---src-pages-explore-js-2de840989d4458ad82b5.js","size":37566}],"filteredAssets":0,"assetsSize":48107,"filteredAuxiliaryAssets":2,"auxiliaryAssetsSize":981370},"component---src-pages-index-js":{"name":"component---src-pages-index-js","assets":[{"name":"component---src-pages-index-js-0c72ac9d7a1824a70ecf.js","size":502}],"filteredAssets":0,"assetsSize":502,"filteredAuxiliaryAssets":1,"auxiliaryAssetsSize":871},"component---src-pages-markdown-remark-frontmatter-slug-js":{"name":"component---src-pages-markdown-remark-frontmatter-slug-js","assets":[{"name":"component---src-pages-markdown-remark-frontmatter-slug-js-7384a334463a0afcb61d.js","size":510}],"filteredAssets":0,"assetsSize":510,"filteredAuxiliaryAssets":1,"auxiliaryAssetsSize":662}},"assetsByChunkName":{"polyfill":["webpack-runtime-9c2a024535db531f6700.js","polyfill-d69664561c90ab43065f.js"],"app":["webpack-runtime-9c2a024535db531f6700.js","styles.ea1bc6c97323b644ef43.css","framework-308bfafcc2bf57ff7eac.js","0a301732-c83d1dc0decdc7b88c62.js","app-6f33a965e9dc6fcd206c.js"],"component---src-pages-404-js":["component---src-pages-404-js-3c7ab4e45a2c1aa85ac1.js"],"component---src-pages-explore-js":["styles.ea1bc6c97323b644ef43.css","cb1608f2-39a11f9ec0cab62d1613.js","component---src-pages-explore-js-2de840989d4458ad82b5.js"],"component---src-pages-index-js":["component---src-pages-index-js-0c72ac9d7a1824a70ecf.js"],"component---src-pages-markdown-remark-frontmatter-slug-js":["component---src-pages-markdown-remark-frontmatter-slug-js-7384a334463a0afcb61d.js"]},"childAssetsByChunkName":{}}
+{
+  "name": "build-javascript",
+  "namedChunkGroups": {
+    "polyfill": {
+      "name": "polyfill",
+      "assets": [
+        { "name": "webpack-runtime-9c2a024535db531f6700.js", "size": 4498 },
+        { "name": "polyfill-d69664561c90ab43065f.js", "size": 85826 }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": 90324,
+      "filteredAuxiliaryAssets": 2,
+      "auxiliaryAssetsSize": 225659
+    },
+    "app": {
+      "name": "app",
+      "assets": [
+        { "name": "webpack-runtime-9c2a024535db531f6700.js", "size": 4498 },
+        { "name": "styles.ea1bc6c97323b644ef43.css", "size": 9849 },
+        { "name": "framework-308bfafcc2bf57ff7eac.js", "size": 128723 },
+        { "name": "0a301732-c83d1dc0decdc7b88c62.js", "size": 83722 },
+        { "name": "app-6f33a965e9dc6fcd206c.js", "size": 96619 }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": 323411,
+      "filteredAuxiliaryAssets": 4,
+      "auxiliaryAssetsSize": 1175338
+    },
+    "component---src-pages-404-js": {
+      "name": "component---src-pages-404-js",
+      "assets": [
+        {
+          "name": "component---src-pages-404-js-3c7ab4e45a2c1aa85ac1.js",
+          "size": 441
+        }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": 441,
+      "filteredAuxiliaryAssets": 1,
+      "auxiliaryAssetsSize": 728
+    },
+    "component---src-pages-explore-js": {
+      "name": "component---src-pages-explore-js",
+      "assets": [
+        { "name": "styles.ea1bc6c97323b644ef43.css", "size": 9849 },
+        { "name": "cb1608f2-39a11f9ec0cab62d1613.js", "size": 692 },
+        {
+          "name": "component---src-pages-explore-js-2de840989d4458ad82b5.js",
+          "size": 37566
+        }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": 48107,
+      "filteredAuxiliaryAssets": 2,
+      "auxiliaryAssetsSize": 981370
+    },
+    "component---src-pages-index-js": {
+      "name": "component---src-pages-index-js",
+      "assets": [
+        {
+          "name": "component---src-pages-index-js-0c72ac9d7a1824a70ecf.js",
+          "size": 502
+        }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": 502,
+      "filteredAuxiliaryAssets": 1,
+      "auxiliaryAssetsSize": 871
+    },
+    "component---src-pages-markdown-remark-frontmatter-slug-js": {
+      "name": "component---src-pages-markdown-remark-frontmatter-slug-js",
+      "assets": [
+        {
+          "name": "component---src-pages-markdown-remark-frontmatter-slug-js-7384a334463a0afcb61d.js",
+          "size": 510
+        }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": 510,
+      "filteredAuxiliaryAssets": 1,
+      "auxiliaryAssetsSize": 662
+    }
+  },
+  "assetsByChunkName": {
+    "polyfill": [
+      "webpack-runtime-9c2a024535db531f6700.js",
+      "polyfill-d69664561c90ab43065f.js"
+    ],
+    "app": [
+      "webpack-runtime-9c2a024535db531f6700.js",
+      "styles.ea1bc6c97323b644ef43.css",
+      "framework-308bfafcc2bf57ff7eac.js",
+      "0a301732-c83d1dc0decdc7b88c62.js",
+      "app-6f33a965e9dc6fcd206c.js"
+    ],
+    "component---src-pages-404-js": [
+      "component---src-pages-404-js-3c7ab4e45a2c1aa85ac1.js"
+    ],
+    "component---src-pages-explore-js": [
+      "styles.ea1bc6c97323b644ef43.css",
+      "cb1608f2-39a11f9ec0cab62d1613.js",
+      "component---src-pages-explore-js-2de840989d4458ad82b5.js"
+    ],
+    "component---src-pages-index-js": [
+      "component---src-pages-index-js-0c72ac9d7a1824a70ecf.js"
+    ],
+    "component---src-pages-markdown-remark-frontmatter-slug-js": [
+      "component---src-pages-markdown-remark-frontmatter-slug-js-7384a334463a0afcb61d.js"
+    ]
+  },
+  "childAssetsByChunkName": {}
+}
