@@ -11,6 +11,11 @@ import FilterAtom from "../../state/filterAtom";
 
 // import useInternalPaths from '../../_helpers/useInternalPaths';
 
+const truncate = (str, maxlength=48) => {
+  if(!str) return "..."
+  return str.length > maxlength ? str.slice(0, maxlength).trim() + "..." : str;
+}
+
 const Posts = ({ postCount = undefined }) => {
   // For Searching
   // const blogRoutes = useInternalPaths().filter(path => path.startsWith("/blog"));
@@ -67,7 +72,7 @@ const Posts = ({ postCount = undefined }) => {
                 </div>
                 <span>{author}</span>
               </div>
-              <div className="blog-route-title">{title}</div>
+              <div className="blog-route-title">{truncate(title)}</div>
               <p className="blog-route-description" data-nosnippet>
                 {description}
               </p>

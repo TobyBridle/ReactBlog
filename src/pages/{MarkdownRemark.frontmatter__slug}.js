@@ -1,14 +1,49 @@
 import * as React from "react";
 import { graphql } from "gatsby";
+import Layout from "../components/layout";
+import "./blogposts.css"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faClock } from "@fortawesome/free-regular-svg-icons";
 
-export default function MarkdownTemplate({ data }) {
+const truncate = (str, maxlength=48) => {
+  if(!str) return "..."
+  return str.length > maxlength ? str.slice(0, maxlength).trim() + "..." : str;
+}
+
+export default function MarkdownTemplate({data: {markdownRemark: data}}) {
+  const meta = {
+    title: data.frontmatter.title,
+    description: data.frontmatter.description,
+    author: data.frontmatter.author,
+    image: data.frontmatter.articleThumbnail
+  }
   return (
-    <>
-      <h1>Articles haven't been made yet</h1>
-      <h2>
-        Reading Articles hasn't been implemented as of 27/12/2021 - check back
-        another time
-      </h2>
-    </>
+    <Layout meta={meta}>
+      <div className="post-info">
+        <h1 className="title">{truncate(data.frontmatter.title)}</h1>
+        <div className="post-info-meta">
+          <div className="post-meta-date"><FontAwesomeIcon icon={ faClock }/><p>{data.frontmatter.date}</p></div>
+          <div className="post-meta-author"><img src={data.frontmatter.authorPicture} alt="Author"/><p>{data.frontmatter.author}</p></div>
+        </div>
+        </div>
+        <div className="post-content" dangerouslySetInnerHTML={{__html: data.html}}></div>
+    </Layout>
   );
 }
+
+export const query = graphql`
+  query($id: String!){
+    markdownRemark(id: {eq: $id})
+    {
+      frontmatter {
+        author
+        authorPicture
+        date(formatString: "MMMM DD YYYY")
+        title
+        description
+        articleThumbnail
+      }
+      html
+    }
+  }
+`

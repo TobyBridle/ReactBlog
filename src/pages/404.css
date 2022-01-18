@@ -1,0 +1,45 @@
+.watermark-404 {
+    font: var(--heading-family);
+    font-weight: 600;
+    font-size: clamp(20px, 50vw, 300px);
+    color: var(--blog-image-placeholder);
+
+    position: absolute;
+    width: 100%;
+    left: -7.5vw;
+    pointer-events: none;
+
+    z-index: -1;
+}
+
+.content-404 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(30px, 1vh, 100px);
+
+    transform: translateY(50%);
+
+
+}
+
+.content-404 h2 {
+    color: var(--navbar-muted);
+    font-size: clamp(1.5rem, 2.2vw + 1rem, 3.125rem);
+    width: calc(10 * clamp(1.5rem, 2.2vw + 1rem, 3.125rem));
+}
+
+.content-404 span {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+}
+
+.content-404 span a {
+    font-weight: 600;
+    text-decoration: underline;
+}

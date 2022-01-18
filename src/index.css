@@ -34,8 +34,6 @@ body {
   background: var(--background);
   font-family: var(--body-family);
   letter-spacing: 1px;
-
-  overflow: hidden;
 }
 
 .App {

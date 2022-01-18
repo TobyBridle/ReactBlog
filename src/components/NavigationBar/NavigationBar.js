@@ -38,7 +38,7 @@ function NavigationBar() {
           routes.map((route) => {
             if (route.navSlug === activeURL.routeSlug) {
               return (
-                <li className="active-nav" key={route.navSlug}>
+                <li className="active-nav" key={activeURL.routeSlug}>
                   <Link to={activeURL.routeSlug}>{activeURL.routeTitle}</Link>
                 </li>
               );

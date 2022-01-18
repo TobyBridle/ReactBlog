@@ -2,7 +2,7 @@
   /* Fonts */
 
   --heading-family: bold 1.5em/1 "Poppins", sans-serif;
-  --body-family: normal 0.875em/1.5 "Domine", serif;
+  --body-family: normal 0.875em/1.5 "Noto Serif", serif;
 }
 
 .theme-light {
@@ -32,10 +32,15 @@
   --reading-time-clock: #8a8a8a;
   --reading-time-text: #313131;
 
+  --blog-image-placeholder: #EDECEC;
+
   /* Navigation Bar Colours */
   --navbar-active: #3c3c3c;
   --navbar-muted: #686868ad;
   --navbar-hover: #333;
+
+  /* Markdown Colours */
+  --link-color: #5250BB;
 
   /* Theme Toggle Colours */
 
@@ -69,10 +74,15 @@
   --reading-time-clock: #fff;
   --reading-time-text: #fff;
 
+  --blog-image-placeholder: #151515;
+
   /* Navigation Bar Colours */
   --navbar-active: #f5f5f5;
   --navbar-muted: #8f8f8f;
   --navbar-hover: #f4f4f4;
+
+  /* Markdown Colours */
+  --link-color: #9493dd;
 
   /* Theme Toggle Colours */
 
