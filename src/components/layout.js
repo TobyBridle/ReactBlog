@@ -5,12 +5,12 @@ import "./ThemeToggle/themes.css";
 import "../index.css";
 import { Helmet } from "react-helmet";
 
-const Layout = ({ children, meta }) => {
+const Layout = ({ children, meta, className}) => {
   let origin = "https://bridle.ml";
 
   React.useEffect(() => {
     origin = window.location.origin;
-    if (window.matchMedia("(prefers-color-scheme: light)").matches) {
+    if (window.matchMedia("(prefers-color-scheme: light)").matches || window.localStorage.getItem("prefers-color-scheme") !== "dark") {
       document.documentElement.className = "theme-light";
     } else {
       document.documentElement.className = "theme-dark";
@@ -139,7 +139,7 @@ const Layout = ({ children, meta }) => {
           <Navbar />
         </section>
 
-        <section className="page-content">{children}</section>
+        <section className={`page-content ${className}`}>{children}</section>
       </div>
     </>
   );

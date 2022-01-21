@@ -3,7 +3,9 @@ rank: 1
 following: "none"
 title: "How I created A Blog Page using Gatsby & React"
 author: "Toby Bridle"
-articleThumbnail: "https://codingthesmartway.com/wp-content/uploads/2019/02/gatsby-logo.png"
+# articleThumbnail: "https://codingthesmartway.com/wp-content/uploads/2019/02/gatsby-logo.png"
+articleThumbnail: "https://llandscapes-10674.kxcdn.com/wp-content/uploads/2019/07/lighting.jpg"
+squishThumbnail: true
 authorPicture: "https://cdn.ebaumsworld.com/2020/01/13/021356/86172725/lego-star-wars-profile-25.jpg"
 description: "My (annoying) journey using Gatsby, React & Recoil"
 slug: "/blog/how-i-created-a-blog-page-using-gatsby"

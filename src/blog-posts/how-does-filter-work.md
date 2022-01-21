@@ -4,6 +4,7 @@ following: "Admin"
 title: "How does the Filtering Work?"
 author: "Not Toby Bridle"
 articleThumbnail: "https://img.icons8.com/color/344/filter-and-sort.png"
+squishThumbnail: false
 authorPicture: "https://cdn.ebaumsworld.com/2020/01/13/021054/86172703/lego-star-wars-profile-4.jpg"
 description: "An Article explaining how the filter system would be used."
 slug: "/blog/how-the-filter-works"

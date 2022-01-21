@@ -8,6 +8,7 @@ import { faClock } from "@fortawesome/free-regular-svg-icons";
 
 import { useRecoilState } from "recoil";
 import FilterAtom from "../../state/filterAtom";
+import navigationAtom from "../../state/navigationAtom";
 
 // import useInternalPaths from '../../_helpers/useInternalPaths';
 
@@ -19,6 +20,8 @@ const truncate = (str, maxlength=48) => {
 const Posts = ({ postCount = undefined }) => {
   // For Searching
   // const blogRoutes = useInternalPaths().filter(path => path.startsWith("/blog"));
+
+  const [, setURL] = useRecoilState(navigationAtom);
 
   const {
     allMarkdownRemark: { nodes },
@@ -33,6 +36,7 @@ const Posts = ({ postCount = undefined }) => {
       .sort((rank, rankAsc) => rank.frontmatter.rank - rankAsc.frontmatter.rank)
       .slice(0, postCount),
   };
+
 
   const [activeFilter] = useRecoilState(FilterAtom);
 
@@ -61,7 +65,7 @@ const Posts = ({ postCount = undefined }) => {
         } = page;
         if (rank > 0) modTags.push(...tags, `#${rank} on Trending 🔥`);
         return (
-          <Link key={slug} className="blog-route" to={slug}>
+          <Link key={slug} className="blog-route" to={slug} onClick={() => setURL({ routeTitle: title, routeSlug: slug })}>
             <div className="blog-route-left">
               <div className="blog-route-author-info">
                 <div className="blog-route-author-profile">

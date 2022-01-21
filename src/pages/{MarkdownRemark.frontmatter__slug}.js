@@ -18,12 +18,15 @@ export default function MarkdownTemplate({data: {markdownRemark: data}}) {
     image: data.frontmatter.articleThumbnail
   }
   return (
-    <Layout meta={meta}>
+    <Layout meta={meta} className="post-container">
       <div className="post-info">
         <h1 className="title">{truncate(data.frontmatter.title)}</h1>
         <div className="post-info-meta">
-          <div className="post-meta-date"><FontAwesomeIcon icon={ faClock }/><p>{data.frontmatter.date}</p></div>
-          <div className="post-meta-author"><img src={data.frontmatter.authorPicture} alt="Author"/><p>{data.frontmatter.author}</p></div>
+          <div className="post-meta-author"><p>Author:</p>{data.frontmatter.author}</div>
+          <div className="post-meta-date"><p>Date:</p>{data.frontmatter.date}</div>
+        </div>
+        <div className="post-image">
+          <img className={data.frontmatter.squishThumbnail ? "squish" : "no-squish"} src={data.frontmatter.articleThumbnail} alt="Thumbnail"></img>
         </div>
         </div>
         <div className="post-content" dangerouslySetInnerHTML={{__html: data.html}}></div>
@@ -42,6 +45,7 @@ export const query = graphql`
         title
         description
         articleThumbnail
+        squishThumbnail
       }
       html
     }
