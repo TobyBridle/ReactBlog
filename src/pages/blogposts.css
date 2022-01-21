@@ -114,6 +114,7 @@
 }
 
 .post-content a * {
+    text-decoration: underline;
 }
 
 .post-content code {

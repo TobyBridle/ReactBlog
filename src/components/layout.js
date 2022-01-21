@@ -5,15 +5,15 @@ import "./ThemeToggle/themes.css";
 import "../index.css";
 import { Helmet } from "react-helmet";
 
-const Layout = ({ children, meta, className}) => {
+const Layout = ({ children, meta, className=""}) => {
   let origin = "https://bridle.ml";
 
   React.useEffect(() => {
     origin = window.location.origin;
-    if (window.matchMedia("(prefers-color-scheme: light)").matches || window.localStorage.getItem("prefers-color-scheme") !== "dark") {
-      document.documentElement.className = "theme-light";
-    } else {
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches || window.localStorage.getItem("prefers-color-scheme") !== "light") {
       document.documentElement.className = "theme-dark";
+    } else {
+      document.documentElement.className = "theme-light";
     }
   });
   return (
