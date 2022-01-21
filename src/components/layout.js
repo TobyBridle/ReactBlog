@@ -10,11 +10,12 @@ const Layout = ({ children, meta, className=""}) => {
 
   React.useEffect(() => {
     origin = window.location.origin;
-    if (window.matchMedia("(prefers-color-scheme: dark)").matches || window.localStorage.getItem("prefers-color-scheme") !== "light") {
-      document.documentElement.className = "theme-dark";
-    } else {
-      document.documentElement.className = "theme-light";
-    }
+    document.documentElement.className = "theme-light";
+    // if (window.matchMedia("(prefers-color-scheme: dark)").matches || window.localStorage.getItem("prefers-color-scheme") !== "light") {
+    //   document.documentElement.className = "theme-dark";
+    // } else {
+    //   document.documentElement.className = "theme-light";
+    // }
   });
   return (
     <>
