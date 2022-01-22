@@ -40,6 +40,10 @@ const Posts = ({ postCount = undefined }) => {
 
   const [activeFilter] = useRecoilState(FilterAtom);
 
+  React.useEffect(() => {
+    let origin = window.origin;
+  })
+
   return (
     <section className="PostsContainer">
       <PageSplit
@@ -102,7 +106,7 @@ const Posts = ({ postCount = undefined }) => {
             </div>
             <div className="blog-route-right">
               <div className="blog-route-thumbnail">
-                <img src={articleThumbnail} alt={"Article Thumbnail"} />
+                <img src={`${origin}/assets/Thumbnails/${articleThumbnail}`} alt={"Article Thumbnail"} />
               </div>
               <div className="blog-route-estimated" data-nosnippet>
                 <FontAwesomeIcon
