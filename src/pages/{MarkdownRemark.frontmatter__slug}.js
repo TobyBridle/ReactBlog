@@ -11,6 +11,11 @@ const truncate = (str, maxlength=48) => {
 }
 
 export default function MarkdownTemplate({data: {markdownRemark: data}}) {
+
+  React.useEffect(() => {
+    let origin = window.origin;
+  })
+
   const meta = {
     title: data.frontmatter.title,
     description: data.frontmatter.description,
@@ -26,7 +31,7 @@ export default function MarkdownTemplate({data: {markdownRemark: data}}) {
           <div className="post-meta-date"><p>Date:</p>{data.frontmatter.date}</div>
         </div>
         <div className="post-image">
-          <img className={data.frontmatter.squishThumbnail ? "squish" : "no-squish"} src={data.frontmatter.articleThumbnail} alt="Thumbnail"></img>
+          <img className={data.frontmatter.squishThumbnail ? "squish" : "no-squish"} src={`${origin}/assets/Banners/${data.frontmatter.articleThumbnail}`} alt="Thumbnail"></img>
         </div>
         </div>
         <div className="post-content" dangerouslySetInnerHTML={{__html: data.html}}></div>
