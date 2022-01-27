@@ -24,7 +24,7 @@ const Posts = ({ postCount = undefined }) => {
   const [, setURL] = useRecoilState(navigationAtom);
 
   const {
-    allMarkdownRemark: { nodes },
+    allMdx: { nodes },
   } = useStaticQuery(BlogPostsMetaData);
 
   const pages = {
@@ -39,10 +39,6 @@ const Posts = ({ postCount = undefined }) => {
 
 
   const [activeFilter] = useRecoilState(FilterAtom);
-
-  React.useEffect(() => {
-    let origin = window.origin;
-  })
 
   return (
     <section className="PostsContainer">
@@ -75,7 +71,7 @@ const Posts = ({ postCount = undefined }) => {
                 <div className="blog-route-author-profile">
                   <img
                     src={authorPicture}
-                    alt={`${author}'s Profile Picture`}
+                    alt={`${author}'s Profile`}
                   />
                 </div>
                 <span>{author}</span>
@@ -126,8 +122,7 @@ const Posts = ({ postCount = undefined }) => {
 
 const BlogPostsMetaData = graphql`
   query {
-    allMarkdownRemark {
-      #//! Need to add Limit using \`lim\`
+    allMdx {
       nodes {
         frontmatter {
           rank

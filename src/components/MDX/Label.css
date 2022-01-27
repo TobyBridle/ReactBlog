@@ -1,0 +1,9 @@
+div.additional-comment {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0 25px;
+    font-family: "Noto Serif", serif;
+    font-style: italic;
+    color: var(--navbar-muted);
+}

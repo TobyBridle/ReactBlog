@@ -9,7 +9,7 @@ import NavigationAtom from "../../../state/navigationAtom";
 import { useRecoilState } from "recoil";
 
 function PageMeta() {
-  const [_, setActiveURL] = useRecoilState(NavigationAtom);
+  const [, setActiveURL] = useRecoilState(NavigationAtom);
 
   return (
     <section className="page-content-top">

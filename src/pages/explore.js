@@ -10,9 +10,6 @@ import PageFilter from "../components/Explore/PageFilter/PageFilter";
 import Layout from "../components/layout";
 import Posts from "../components/Posts/Posts";
 
-import { useRecoilState } from "recoil";
-import navigationAtom from "../state/navigationAtom";
-
 function Explore() {
 
   const metaInfo = {

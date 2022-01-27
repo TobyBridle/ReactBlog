@@ -12,12 +12,41 @@ date: "2021-12-27"
 tags: ["Projects", "Programming"]
 ---
 
+import { Label } from "../components/MDX/Label.js"
+import { CodeHighlight } from "../components/MDX/CodeHighlight.js"
+
 # How the Filter System currently works
 
 At the moment, since this is just a static page, GraphQL retrieves a list of articles & their metadata.
 This metadata contains lots of useful information, but what we use for the filtering is `rank` & `following`. The `rank` property shows how high on the **Popular** filter the article should be, and `following` just indicates that the article should be on the **Following** filter.
 
+<CodeHighlight language="js" content={`
+  const {
+    allMdx: { nodes }, // Map the value of \`allMdx\` to the variable \`nodes\`
+  } = useStaticQuery(BlogPostsMetaData);
+\n
+  // \`postCount\` was defined in the scope of the component\n
+  const pages = {
+    following: nodes
+      .filter((post) => post.frontmatter.following !== "none")
+      .slice(0, postCount),
+    popular: nodes
+      .filter((post) => post.frontmatter.rank > 0)
+      .sort((rank, rankAsc) => rank.frontmatter.rank - rankAsc.frontmatter.rank)
+      .slice(0, postCount),
+  };\n
+  const [activeFilter] = useRecoilState(FilterAtom);
+`} />
+
+<Label text="The Filter in JS" />
+
+As you can see in the snippet above, a GraphQL query is made to retrieve the necessary data about each blog post. The query returns an array of records which are then checked for the properties. Posts with the **following** property, but not a **rank**, are placed into the **following** key for `pages` (`pages['following']`). Posts with a rank, are placed into the **popular** key for `pages` (`pages['popular']`).
+Depending on the state of `activeFilter`, the page will render one of the two (either `pages['following']` or `pages['popular']`).
+
+
 # How this could be done using a Server
 
 We could use a similar concept as already shown; however, rather than manually needing to update the frontmatter of each blog page - we could use GraphQL [**mutations**](https://graphql.org/learn/queries/). Mutations are used to update the value of a field on the server. We could combine a `useEffect` and a mutation regarding the change of a field named `hits`.
 Then, when we are rendering the articles, we can sort by `hits` in descending order for the **Popular** filter.
+
+<PostEnd />

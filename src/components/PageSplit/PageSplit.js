@@ -6,6 +6,7 @@ function PageSplit({
   pos = "bottom",
   thickness = "slim",
   transform = { at: null, axis: null, pos: null, size: null },
+  absolute = true
 }) {
   const [t, setTransform] = useState(Infinity);
 
@@ -35,14 +36,16 @@ function PageSplit({
     };
   }, []);
 
+  const positioning = absolute ? "split-position-absolute" : "split-position-relative";
+
   return (
     <>
       {t <= transform.at ? (
         <hr
-          className={`pageSplit ${transform.pos} ${transform.size} ${thickness}`}
+          className={`pageSplit ${transform.pos} ${transform.size} ${thickness} ${positioning}`}
         />
       ) : (
-        <hr className={`pageSplit ${pos} ${size} ${thickness}`} />
+        <hr className={`pageSplit ${pos} ${size} ${thickness} ${positioning}`} />
       )}
     </>
   );

@@ -18,7 +18,15 @@ module.exports = {
         path: `${__dirname}/src/blog-posts`,
       },
     },
-    "gatsby-transformer-remark",
+    {
+      resolve: "gatsby-transformer-remark",
+    },
+    {
+      resolve: "gatsby-plugin-mdx",
+      options: {
+        extensions: [".mdx", ".md"],
+      }
+    },
     "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-plugin-sitemap",

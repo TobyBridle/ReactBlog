@@ -5,13 +5,13 @@
 
 /* Horizontal Splits */
 
-.pageSplit.top {
+.pageSplit.split-position-absolute.left {
   left: 50%;
   transform: translateX(-50%);
   top: -2vh;
 }
 
-.pageSplit.bottom {
+.pageSplit.split-position-absolute.bottom {
   left: 50%;
   transform: translateX(-50%);
   bottom: -2vh;
@@ -36,13 +36,13 @@
 }
 
 /* Vertical Splits */
-.pageSplit.left {
+.pageSplit.split-position-absolute.left {
   top: 50%;
   transform: translateY(-50%);
   left: -2vw;
 }
 
-.pageSplit.right {
+.pageSplit.split-position-absolute.right {
   top: 50%;
   transform: translateY(-50%);
   right: -2vw;

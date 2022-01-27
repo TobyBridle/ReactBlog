@@ -9,7 +9,7 @@ import navigationAtom from "../state/navigationAtom";
 
 const NotFoundPage = () => {
 
-  const [path, setPath ] = useRecoilState(navigationAtom);
+  const [, setPath ] = useRecoilState(navigationAtom);
 
   const metaInfo = {
     title: "404 - Page not Found",

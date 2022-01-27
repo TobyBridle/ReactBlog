@@ -1,0 +1,15 @@
+pre.prism-code * {
+    color: white;
+    font-family: "Fira Code", sans-serif;
+}
+
+pre.prism-code {
+    margin: 2em 0 1em 0;
+    padding: 1em;
+    overflow: auto;
+    border-radius: 1em;
+}
+
+pre.prism-code .line-number {
+    color: var(--action-color);
+}

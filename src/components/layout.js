@@ -11,6 +11,10 @@ const Layout = ({ children, meta, className=""}) => {
   React.useEffect(() => {
     origin = window.location.origin;
     document.documentElement.className = "theme-light";
+    console.group("Easter EGG :)");
+      console.info("%cHello! Nice to see someone here.", "color: lime; font-size: 2em;");
+      console.info("I've got a treat for you (crazy, I know!). Change the document class from `theme-light` to `theme-dark` for an eye-pleasing easteregg <3");
+    console.groupEnd();
     // if (window.matchMedia("(prefers-color-scheme: dark)").matches || window.localStorage.getItem("prefers-color-scheme") !== "light") {
     //   document.documentElement.className = "theme-dark";
     // } else {
