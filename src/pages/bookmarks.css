@@ -1,0 +1,5 @@
+.bookmark-page .bookmarks-button {
+    cursor: auto;
+    opacity: 0.5;
+    pointer-events: none;
+}

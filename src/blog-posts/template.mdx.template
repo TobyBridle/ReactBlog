@@ -1,0 +1,13 @@
+---
+rank: RANK | null if not ranked 
+following: "authors" | "none" if not on following list
+title: "title"
+author: "author"
+articleThumbnail: "name of file inside of `assets/Thumbnails`"
+squishThumbnail: true/false | whether or not the image should be squished
+authorPicture: "https://cdn.ebaumsworld.com/2020/01/13/021356/86172725/lego-star-wars-profile-25.jpg"
+description: "Description of Article"
+slug: "/blog/SLUG"
+date: "YYYY-MM-DD"
+tags: [] | Array of String Tags
+---

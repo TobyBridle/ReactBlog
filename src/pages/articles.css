@@ -1,0 +1,27 @@
+.PostsContainer.AllArticles-Flow {
+    width: 100%;
+    height: auto;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(477px, 1fr));
+    column-gap: 0;
+
+    overflow-y: hidden;
+
+}
+
+.PostsContainer.AllArticles-Flow .blog-route {
+    width: 90%;
+    height: auto;
+}
+
+@media only screen and (max-width: 950px)
+{
+    .PostsContainer.AllArticles-Flow {
+        width: calc(100% - clamp(0.5em, 0.8vw, 0.7em));
+    }
+
+    .PostsContainer.AllArticles-Flow .blog-route {
+        width: 80%;
+    }
+}
