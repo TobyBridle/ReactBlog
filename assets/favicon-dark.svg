@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
-  <rect x="1.166" y="0.26" width="498.025" height="501.459" style="stroke: rgb(0, 0, 0); stroke-opacity: 0; fill: rgb(24, 24, 24);"/>
-  <text style="fill: rgb(229, 229, 229); font-family: &quot;Fira Code&quot;; font-size: 100.6px; font-weight: 700; letter-spacing: -7px; word-spacing: -3.5px; white-space: pre;" x="84.155" y="280.939">Bridle</text>
-  <path style="stroke-dashoffset: -50px; stroke-dasharray: 4, 10; vector-effect: non-scaling-stroke; fill: rgb(255, 255, 255); stroke: rgb(92, 216, 121); stroke-width: 3px; stroke-opacity: 0.31;" d="M 82.545 293.369 L 421.879 293.369"/>
-</svg>
