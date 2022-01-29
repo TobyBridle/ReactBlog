@@ -3,7 +3,6 @@ import { recoilPersist } from "recoil-persist";
 
 const { persistAtom } = recoilPersist({
     key: "bookmark-persist",
-    storage: localStorage
 });
 
 const BookmarkAtom = atom({

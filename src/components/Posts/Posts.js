@@ -22,6 +22,11 @@ const Posts = ({ postCount = undefined }) => {
   // const blogRoutes = useInternalPaths().filter(path => path.startsWith("/blog"));
 
   const [, setURL] = useRecoilState(navigationAtom);
+  let origin = "https://bridle.ml";
+
+  React.useEffect(() => {
+    origin = window.location.origin;
+  })
 
   const {
     allMdx: { nodes },

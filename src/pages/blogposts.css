@@ -96,6 +96,40 @@
     margin-top: 1vh;
 }
 
+.post-bookmark {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+
+    width: fit-content;
+    padding: 5px;
+    margin: 10px;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    font-family: "Open Sans", serif;
+    color: var(--navbar-muted);
+
+    user-select: none;
+
+}
+
+.post-bookmark svg {
+    box-sizing: content-box;
+    padding: 10px;
+}
+
+.post-bookmark svg path {
+    color: var(--navbar-muted);
+}
+
+.post-bookmark:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
 /* Markdown Formatting */
 
 .post-content {
@@ -117,6 +151,10 @@
     color: var(--color);
 }
 
+.post-content p {
+    padding: 4.5px;
+}
+
 .post-content a *, .post-content a {
     color: var(--link-color);
     text-decoration: underline;
@@ -133,11 +171,24 @@
     border-radius: 3px;
 }
 
+.post-content ul, ol {
+    font-family: "Open Sans", sans-serif;
+    padding: 25px;
+}
+
 @media only screen and (max-width: 1600px)
 {
     .page-content.post-container {
         width: 85%;
     }
+}
+
+@media only screen and (max-width: 1200px)
+{
+    .post-bookmark span {
+        display: none;
+    }
+
 }
 
 @media only screen and (max-width: 950px) {
@@ -147,6 +198,9 @@
 }
 
 @media only screen and (max-width: 650px){
+    .page-content.post-container {
+        width: 100vw;
+    }
     body {
         font-size: 14px;
     }

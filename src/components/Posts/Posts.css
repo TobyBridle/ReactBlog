@@ -15,7 +15,8 @@
   position: relative;
   display: flex;
   /* max-width: clamp(500px, 38%, 60vw); */
-  width: 90%;
+  width: 100%;
+  height: fit-content;
   font-family: "Poppins", sans-serif;
 }
 

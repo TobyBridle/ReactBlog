@@ -8,16 +8,14 @@ import "./PageMeta.css";
 import NavigationAtom from "../../../state/navigationAtom";
 import { useRecoilState } from "recoil";
 
-function PageMeta() {
+function PageMeta({title="What's New?", description="Trending Articles, or even ones from users you Follow", className=""}) {
   const [, setActiveURL] = useRecoilState(NavigationAtom);
 
   return (
-    <section className="page-content-top">
+    <section className={`page-content-top ${className}`}>
       <div className="page-meta">
-        <h1 className="page-content-header">What's New?</h1>
-        <p className="page-content-description">
-          Trending Articles, or even ones from users you Follow
-        </p>
+        <h1 className="page-content-header">{title}</h1>
+        <p className="page-content-description">{description}</p>
       </div>
       <div className="page-actions">
         <label className="search-bar">
