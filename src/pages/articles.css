@@ -17,11 +17,31 @@
 
 @media only screen and (max-width: 950px)
 {
+  .PostsContainer.AllArticles-Flow {
+      width: 100%;
+  }
+  .AllArticles-Flow .blog-route {
+    width: 100%;
+  }
+  .AllArticles-Flow .blog-route .blog-route-description {
+    max-width: 80%;
+  }
+}
+
+@media only screen and (max-width: 600px)
+{
+    .PostsContainer.AllArticles-Flow .blog-route {
+        width: calc(100% - 4em);
+    }
+}
+
+@media only screen and (max-width: 450px) {
+
     .PostsContainer.AllArticles-Flow {
-        width: calc(100% - clamp(0.5em, 0.8vw, 0.7em));
+        width: 100%;
     }
 
     .PostsContainer.AllArticles-Flow .blog-route {
-        width: 80%;
+        width: 67%;
     }
 }
