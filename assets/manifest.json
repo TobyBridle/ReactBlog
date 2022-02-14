@@ -1,0 +1,42 @@
+{
+    "short_name": "Bridle.ML Blog",
+    "name": "Bridle.ML Blog | Portfolio Blog",
+    "icons": [
+        {
+            "src": "/assets/favicon-128x-light.png",
+            "type": "image/png",
+            "sizes": "128x128"
+        },
+        {
+            "src": "/assets/favicon-256x-light.png",
+            "type": "image/png",
+            "sizes": "256x256"
+        },
+        {
+            "src": "/assets/favicon-512x-light.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "start_url": "/explore",
+    "background_color": "#F4F4F4",
+    "theme_color": "#F4F4F4",
+    "display": "standalone",
+    "scope": "/",
+    "shortcuts": [
+        {
+            "short_name": "Explore",
+            "name": "Bridle.ml| Explore",
+            "description": "The Explore Page for finding trending articles & articles from users who you follow",
+            "url": "/explore",
+            "icons": [{"src": "/assets/favicon-128x-light.png", "sizes": "128x128"}]
+        },
+        {
+            "short_name": "Bookmarks",
+            "name": "Bridle.ml| Bookmarks",
+            "description": "The Bookmark Page for finding those articles you told yourself you'd read",
+            "url": "/bookmarks",
+            "icons": [{"src": "/assets/favicon-128x-light.png", "sizes": "128x128"}]
+        }
+    ]
+}
