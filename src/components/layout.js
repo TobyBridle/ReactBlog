@@ -118,7 +118,7 @@ const Layout = ({ children, meta, className=""}) => {
         <meta
           property="og:image"
           content={
-            meta.image ? meta.image : `${origin}//assets/page-preview-light.jpg`
+            meta.image ? meta.image : `${origin}//assets/page-preview-light.png`
           }
         />
         <meta
