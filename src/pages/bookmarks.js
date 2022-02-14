@@ -14,6 +14,7 @@ import { faClock } from '@fortawesome/free-regular-svg-icons';
 
 import "./bookmarks.css"
 import BookmarkAtom from '../state/bookmarkAtom';
+import SearchAtom from '../state/searchAtom';
 
 const truncate = (str, maxlength=48) => {
   if(!str) return "..."
@@ -23,10 +24,20 @@ const truncate = (str, maxlength=48) => {
 export default function Bookmarks() {
 
     const [, setURL] = useRecoilState(navigationAtom);
-    let origin = "https://bridle.ml";
+    const [searchResults] = useRecoilState(SearchAtom);
+    const [bookmarkedPosts] = useRecoilState(BookmarkAtom);
+
+    let origin = process.env.GATSBY_PAGE_ORIGIN;
+
+    let  {
+        allMdx: { nodes }
+    } = useStaticQuery(BlogPostsMetaData)
+
+    const [posts, setPosts] = React.useState([]);
 
     React.useEffect(() => {
         origin = window.location.origin;
+        setPosts(nodes.filter(post => bookmarkedPosts.includes(post.frontmatter.slug)));
     }, [])
 
     const meta = {
@@ -35,21 +46,13 @@ export default function Bookmarks() {
       " - " + "Want to read an article later? Press \"Bookmark?\" and it'll stay here for another time."
     }
 
-
-    const [bookmarkedPosts] = useRecoilState(BookmarkAtom);
-
-    let  {
-        allMdx: { nodes: posts }
-    } = useStaticQuery(BlogPostsMetaData)
-
-    posts = posts.filter(post => bookmarkedPosts.includes(post.frontmatter.slug));
-
     return (
         <Layout meta={meta} className="use-temp">
         <PageMeta title="Bookmarks" description="Rediscover some articles you've never finished." className="bookmark-page" />
         <section className="PostsContainer AllArticles-Flow">
             {
                 posts.map((post) => {
+
                     const {
                         frontmatter: {
                             title,
@@ -62,6 +65,7 @@ export default function Bookmarks() {
                         },
                         timeToRead
                     } = post;
+
 
                     return (
 

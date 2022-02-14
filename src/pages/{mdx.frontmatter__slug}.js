@@ -24,7 +24,7 @@ export default function MarkdownTemplate({data}) {
   const [bookmarks, setBookmarks] = useRecoilState(BookmarkAtom);
 
   const [bookmarkIcon, setBookmarkIcon] = React.useState(bookmarkUnchecked);
-  let origin = "https://bridle.ml"
+  let origin = process.env.GATSBY_PAGE_ORIGIN;
 
   const swapBookmarks = () => {
 

@@ -21,7 +21,7 @@ const truncate = (str, maxlength=48) => {
 function Articles() {
 
     const [, setURL] = useRecoilState(navigationAtom);
-    let origin = "https://bridle.ml";
+    let origin = process.env.GATSBY_PAGE_ORIGIN;
 
     React.useEffect(() => {
         origin = window.location.origin;

@@ -22,7 +22,7 @@ export default function FrontEnd() {
 
     const [, setURL] = useRecoilState(navigationAtom);
 
-    let origin = "https://bridle.ml";
+    let origin = process.env.PAGE_ORIGIN;
 
     React.useEffect(() => {
         origin = window.location.origin;

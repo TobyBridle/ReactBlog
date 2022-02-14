@@ -1,6 +1,11 @@
+console.log(require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+}))
+
+
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://bridle.ml",
+    siteUrl: "https://blog.bridle.ml",
     title: "Toby Bridle Blog",
   },
   plugins: [

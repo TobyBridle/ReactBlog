@@ -13,7 +13,7 @@ const IndexPage = () => {
     <Layout meta={{ robots: "index,follow" }}>
       <p>
         If you're seeing this, please redirect to{" "}
-        <a href="/explore">https://bridle.ml/explore</a>
+        <a href="/explore">{process.env.GATSBY_PAGE_ORIGIN}/explore</a>
       </p>
     </Layout>
   );

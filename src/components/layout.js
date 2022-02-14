@@ -6,7 +6,7 @@ import "../index.css";
 import { Helmet } from "react-helmet";
 
 const Layout = ({ children, meta, className=""}) => {
-  let origin = "https://bridle.ml";
+  let origin = process.env.GATSBY_PAGE_ORIGIN;
 
   React.useEffect(() => {
     origin = window.location.origin;
@@ -129,13 +129,13 @@ const Layout = ({ children, meta, className=""}) => {
         />
         <meta
           property="twitter:url"
-          content={`${meta.url ? meta.url : "https://bridle.ml/"}`}
+          content={meta.url ? meta.url : origin}
         />
         <meta
           property="twitter:image"
-          content={`${
-            meta.image ? meta.image : `${origin}//assets/page-preview-light.svg`
-          }`}
+          content={
+            meta.image ? meta.image : (`${origin}//assets/page-preview-light.svg`)
+          }
         />
         )
       </Helmet>
