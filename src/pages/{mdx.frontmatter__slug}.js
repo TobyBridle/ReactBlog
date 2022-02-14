@@ -43,7 +43,6 @@ export default function MarkdownTemplate({data}) {
   }
 
   React.useEffect(() => {
-    origin = window.location.origin ? window.location.origin : "localhost";
     if(bookmarks.includes(frontmatter.slug))
     {
       setBookmarkIcon(bookmarkChecked);

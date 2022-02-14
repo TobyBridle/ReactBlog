@@ -25,7 +25,6 @@ export default function FrontEnd() {
     let origin = process.env.PAGE_ORIGIN;
 
     React.useEffect(() => {
-        origin = window.location.origin;
         setURL({
             routeSlug: "/articles/back-end",
             routeTitle: "Back-End"

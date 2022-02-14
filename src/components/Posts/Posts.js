@@ -24,10 +24,6 @@ const Posts = ({ postCount = undefined }) => {
   const [, setURL] = useRecoilState(navigationAtom);
   let origin = process.env.GATSBY_PAGE_ORIGIN;
 
-  React.useEffect(() => {
-    origin = window.location.origin;
-  })
-
   const {
     allMdx: { nodes },
   } = useStaticQuery(BlogPostsMetaData);

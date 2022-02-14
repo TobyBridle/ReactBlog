@@ -24,7 +24,6 @@ function Articles() {
     let origin = process.env.GATSBY_PAGE_ORIGIN;
 
     React.useEffect(() => {
-        origin = window.location.origin;
         setURL({routeSlug: "/articles", routeTitle: "All Articles"});
     }, [])
 

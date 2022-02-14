@@ -9,12 +9,12 @@ const Layout = ({ children, meta, className=""}) => {
   let origin = process.env.GATSBY_PAGE_ORIGIN;
 
   React.useEffect(() => {
-    origin = window.location.origin;
     document.documentElement.className = "theme-light";
     console.group("Easter EGG :)");
       console.info("%cHello! Nice to see someone here.", "color: lime; font-size: 2em;");
       console.info("I've got a treat for you (crazy, I know!). Change the document class from `theme-light` to `theme-dark` for an eye-pleasing easteregg <3");
     console.groupEnd();
+
     // if (window.matchMedia("(prefers-color-scheme: dark)").matches || window.localStorage.getItem("prefers-color-scheme") !== "light") {
     //   document.documentElement.className = "theme-dark";
     // } else {
@@ -25,11 +25,11 @@ const Layout = ({ children, meta, className=""}) => {
     <>
       <Helmet>
         {/* Light Mode Favicon */}
-        <link rel="icon" href={`${origin}//assets/favicon-light.svg`} />
+        <link rel="icon" href={`${origin}//assets/favicon-128x-light.png`} />
         {/* Dark Mode Favicon */}
         <link
           rel="icon"
-          href={`${origin}//assets/favicon-dark.svg`}
+          href={`${origin}//assets/favicon-128x-dark.png`}
           media="(prefers-color-scheme: dark)"
         />
         <title>{`Toby Bridle | ${
@@ -61,23 +61,23 @@ const Layout = ({ children, meta, className=""}) => {
         <link
           rel="apple-touch-icon"
           sizes="180x180"
-          href={`${origin}//assets/apple-touch.png`}
+          href={`${origin}//assets/apple-touch-icon-light.png`}
         />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
-          href={`${origin}//assets/apple-touch-dark.png`}
+          href={`${origin}//assets/apple-touch-icon-dark.png`}
           media="(prefers-color-scheme: dark)"
         />
         <link
           rel="icon"
           sizes="32x32"
-          href={`${origin}//assets/favicon-light.ico`}
+          href={`${origin}//assets/favicon-32x-light.ico`}
         />
         <link
           rel="icon"
           sizes="32x32"
-          href={`${origin}//assets/favicon-dark.ico`}
+          href={`${origin}//assets/favicon-32x-dark.ico`}
           media="(prefers-color-scheme: dark)"
         />
         <meta

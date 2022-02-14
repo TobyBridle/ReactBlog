@@ -36,7 +36,6 @@ export default function Bookmarks() {
     const [posts, setPosts] = React.useState([]);
 
     React.useEffect(() => {
-        origin = window.location.origin;
         setPosts(nodes.filter(post => bookmarkedPosts.includes(post.frontmatter.slug)));
     }, [])
 
