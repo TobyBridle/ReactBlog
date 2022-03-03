@@ -11,6 +11,8 @@ import { useStaticQuery, graphql, Link } from 'gatsby';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClock } from '@fortawesome/free-regular-svg-icons';
 
+import { NoContent }  from "../../components/NoContent";
+
 import "./temp.css"
 
 const truncate = (str, maxlength=48) => {
@@ -48,7 +50,7 @@ export default function FrontEnd() {
         <PageMeta title="Back-End Articles" description="Articles to release the StackOverflow inside of you."/>
         <section className="PostsContainer AllArticles-Flow">
             {
-                posts.map((post) => {
+                posts.length > 1 ? posts.map((post) => {
                     const {
                         frontmatter: {
                             title,
@@ -115,8 +117,8 @@ export default function FrontEnd() {
                     </Link>
                     )
 
-            })
-        }
+            }): <NoContent>Sorry, there are no articles at the moment!</NoContent>
+        }  
         </section>
     </Layout>
   )
