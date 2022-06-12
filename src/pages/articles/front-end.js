@@ -22,7 +22,7 @@ export default function FrontEnd() {
 
     const [, setURL] = useRecoilState(navigationAtom);
 
-    let origin = process.env.PAGE_SPLIT;
+    let origin = process.env.GATSBY_PAGE_ORIGIN;
 
     React.useEffect(() => {
         setURL({
