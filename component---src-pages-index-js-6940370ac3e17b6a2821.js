@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkblog=self.webpackChunkblog||[]).push([[678],{6558:function(e,t,l){l.r(t);var o=l(7294),r=l(7514);t.default=function(){return o.useEffect((function(){var e;e="/explore/",window.location=e})),o.createElement(r.Z,{meta:{robots:"index,follow"}},o.createElement("p",null,"If you're seeing this, please redirect to"," ",o.createElement("a",{href:"/explore"},"https://blog.bridle.ml","/explore")))}}}]);
+//# sourceMappingURL=component---src-pages-index-js-6940370ac3e17b6a2821.js.map
