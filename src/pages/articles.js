@@ -43,6 +43,7 @@ function Articles() {
       <PageMeta
         title="All Articles"
         description="No trending or popular here, just all articles in one place."
+        postsRef={posts}
       />
       <section className="PostsContainer AllArticles-Flow">
         {posts.map((post) => {
