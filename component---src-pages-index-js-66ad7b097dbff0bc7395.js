@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkblog=self.webpackChunkblog||[]).push([[678],{6558:function(e,l,t){t.r(l);var o=t(7294),r=t(7514);l.default=function(){return o.useEffect((function(){var e;e="/explore/",window.location=e})),o.createElement(r.Z,{meta:{robots:"index,follow"}},o.createElement("p",null,"If you're seeing this, please redirect to"," ",o.createElement("a",{href:"/explore"},"blog.bridle.ml","/explore")))}}}]);
+//# sourceMappingURL=component---src-pages-index-js-66ad7b097dbff0bc7395.js.map
