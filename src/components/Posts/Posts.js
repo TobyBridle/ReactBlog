@@ -12,17 +12,17 @@ import navigationAtom from "../../state/navigationAtom";
 
 // import useInternalPaths from '../../_helpers/useInternalPaths';
 
-const truncate = (str, maxlength=48) => {
-  if(!str) return "..."
+const truncate = (str, maxlength = 48) => {
+  if (!str) return "...";
   return str.length > maxlength ? str.slice(0, maxlength).trim() + "..." : str;
-}
+};
 
 const Posts = ({ postCount = undefined }) => {
   // For Searching
   // const blogRoutes = useInternalPaths().filter(path => path.startsWith("/blog"));
 
   const [, setURL] = useRecoilState(navigationAtom);
-  let origin = process.env.GATSBY_PAGE_ORIGIN;
+  // let origin = process.env.GATSBY_PAGE_ORIGIN;
 
   const {
     allMdx: { nodes },
@@ -37,7 +37,6 @@ const Posts = ({ postCount = undefined }) => {
       .sort((rank, rankAsc) => rank.frontmatter.rank - rankAsc.frontmatter.rank)
       .slice(0, postCount),
   };
-
 
   const [activeFilter] = useRecoilState(FilterAtom);
 
@@ -66,14 +65,16 @@ const Posts = ({ postCount = undefined }) => {
         } = page;
         if (rank > 0) modTags.push(...tags, `#${rank} on Trending 🔥`);
         return (
-          <Link key={slug} className="blog-route" to={slug} onClick={() => setURL({ routeTitle: title, routeSlug: slug })}>
+          <Link
+            key={slug}
+            className="blog-route"
+            to={slug}
+            onClick={() => setURL({ routeTitle: title, routeSlug: slug })}
+          >
             <div className="blog-route-left">
               <div className="blog-route-author-info">
                 <div className="blog-route-author-profile">
-                  <img
-                    src={authorPicture}
-                    alt={`${author}'s Profile`}
-                  />
+                  <img src={authorPicture} alt={`${author}'s Profile`} />
                 </div>
                 <span>{author}</span>
               </div>
@@ -103,7 +104,10 @@ const Posts = ({ postCount = undefined }) => {
             </div>
             <div className="blog-route-right">
               <div className="blog-route-thumbnail">
-                <img src={`${origin}/assets/Thumbnails/${articleThumbnail}`} alt={"Article Thumbnail"} />
+                <img
+                  src={`${origin}/assets/Thumbnails/${articleThumbnail}`}
+                  alt={"Article Thumbnail"}
+                />
               </div>
               <div className="blog-route-estimated" data-nosnippet>
                 <FontAwesomeIcon

@@ -5,14 +5,19 @@ import "./ThemeToggle/themes.css";
 import "../index.css";
 import { Helmet } from "react-helmet";
 
-const Layout = ({ children, meta, className=""}) => {
-  let origin = process.env.GATSBY_PAGE_ORIGIN;
+const Layout = ({ children, meta, className = "" }) => {
+  // let origin = process.env.GATSBY_PAGE_ORIGIN;
 
   React.useEffect(() => {
     document.documentElement.className = "theme-light";
     console.group("Easter EGG :)");
-      console.info("%cHello! Nice to see someone here.", "color: lime; font-size: 2em;");
-      console.info("I've got a treat for you (crazy, I know!). Change the document class from `theme-light` to `theme-dark` for an eye-pleasing easteregg <3");
+    console.info(
+      "%cHello! Nice to see someone here.",
+      "color: lime; font-size: 2em;"
+    );
+    console.info(
+      "I've got a treat for you (crazy, I know!). Change the document class from `theme-light` to `theme-dark` for an eye-pleasing easteregg <3"
+    );
     console.groupEnd();
 
     // if (window.matchMedia("(prefers-color-scheme: dark)").matches || window.localStorage.getItem("prefers-color-scheme") !== "light") {
@@ -127,14 +132,11 @@ const Layout = ({ children, meta, className=""}) => {
             meta.twitter_card ? meta.twitter_card : "summary_large_image"
           }
         />
-        <meta
-          property="twitter:url"
-          content={meta.url ? meta.url : origin}
-        />
+        <meta property="twitter:url" content={meta.url ? meta.url : origin} />
         <meta
           property="twitter:image"
           content={
-            meta.image ? meta.image : (`${origin}//assets/page-preview-light.svg`)
+            meta.image ? meta.image : `${origin}//assets/page-preview-light.svg`
           }
         />
         )
