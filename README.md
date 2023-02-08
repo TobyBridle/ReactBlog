@@ -6,9 +6,16 @@ completely inactive as I have managed to figure out where I had gone wrong befor
 
 ~~**The WIP state that it was in before the incident can still be found [here](https://blog.bridle.ml/explore/)**~~
 <br>
-This project can be found **[here](https://blog.bridle.ml/explore/)**
+This project is no longer hosted; however, can still be run locally just fine.
+To view a preview of the site, run:
+
+```bash
+$ yarn install
+$ npx gatsby develop
+```
 
 # To-Do
+
 - [x] Searchbar Functionality
 - [ ] Refactor Code (Repeated definitions of GraphQL queries, Post components)
 - [ ] User Testing & Feedback
