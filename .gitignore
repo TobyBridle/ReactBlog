@@ -3,5 +3,5 @@ node_modules/
 .cache/
 public/*
 !public/links.json
-.env.*
+.env.production
 .DS_Store
